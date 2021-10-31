@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="drawing.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="1296.0405"
+     inkscape:cy="256.83218"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="986"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="opacity:1;fill:#e0d300;fill-opacity:1;stroke:none;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       id="path826"
+       cx="-17.008928"
+       cy="166.9762"
+       r="35.71875"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\coin.png"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:#e1e1e1;fill-opacity:1;stroke:none;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       id="path5735"
+       sodipodi:sides="3"
+       sodipodi:cx="46.491074"
+       sodipodi:cy="67.190475"
+       sodipodi:r1="32.344032"
+       sodipodi:r2="64.688065"
+       sodipodi:arg1="0.04091283"
+       sodipodi:arg2="1.0881104"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 78.80804,68.513392 29.186911,94.516331 31.47827,38.541703 Z"
+       inkscape:transform-center-x="-5.8926967"
+       inkscape:transform-center-y="-0.57686474"
+       transform="rotate(-2.1503401,58.496865,78.051767)"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+    <circle
+       style="opacity:1;fill:#e1e1e1;fill-opacity:1;stroke:none;stroke-width:66.66667175;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       id="path5737"
+       cx="117.92856"
+       cy="66.8125"
+       r="26.458332"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+    <circle
+       style="opacity:1;fill:#fdf40a;fill-opacity:1;stroke:none;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       id="path824"
+       cx="-17.008928"
+       cy="166.9762"
+       r="28.597837"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\coin.png"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:0.69536426;stroke:none;stroke-width:95.55888367;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       d="M 0.90429688,545.04492 -152.58594,693.19727 a 108.08631,108.08631 0 0 0 21.48828,22.70507 L 22.830078,567.32812 A 108.08631,108.08631 0 0 0 0.90429688,545.04492 Z"
+       id="rect836"
+       inkscape:connector-curvature="0"
+       transform="scale(0.26458333)"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\coin.png"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:0.69536426;stroke:none;stroke-width:85.91016388;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       d="M 26.400391,572.31836 -126.20898,719.61914 a 108.08631,108.08631 0 0 0 9.5371,5.97852 L 32.039062,582.06055 a 108.08631,108.08631 0 0 0 -5.638671,-9.74219 z"
+       id="rect838"
+       inkscape:connector-curvature="0"
+       transform="scale(0.26458333)"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\coin.png"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:0.69536426;stroke:none;stroke-width:119.79600525;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       d="M -25.087891,530.48047 -166.21094,666.69531 a 108.08631,108.08631 0 0 0 9.54883,20.31055 L -5.1230469,540.73828 A 108.08631,108.08631 0 0 0 -25.087891,530.48047 Z"
+       id="rect840"
+       inkscape:connector-curvature="0"
+       transform="scale(0.26458333)"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\coin.png"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+    <path
+       style="opacity:1;fill:#e0d300;fill-opacity:1;stroke:none;stroke-width:90.05421448;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       d="m -419.85938,523.87109 a 107.2208,107.2208 0 0 0 -107.2207,107.22071 107.2208,107.2208 0 0 0 107.2207,107.2207 107.2208,107.2208 0 0 0 107.22071,-107.2207 107.2208,107.2208 0 0 0 -107.22071,-107.22071 z m 0,30.95313 a 76.266513,76.266513 0 0 1 76.26563,76.26758 76.266513,76.266513 0 0 1 -76.26563,76.26562 76.266513,76.266513 0 0 1 -76.26562,-76.26562 76.266513,76.266513 0 0 1 76.26562,-76.26758 z"
+       transform="scale(0.26458333)"
+       id="circle828"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:#e0d300;fill-opacity:1;stroke:none;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       inkscape:transform-center-x="0.01506125"
+       inkscape:transform-center-y="4.8570449"
+       d="m -203.51005,172.41192 -16.91573,-58.9951 33.74108,-0.0522 z"
+       id="path833"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path5741"
+       d="m 124.64393,138.60756 c -15.66766,1e-5 -28.368796,12.70115 -28.36881,28.36881 1.4e-5,15.66766 12.70115,28.3688 28.36881,28.36881 15.66766,-1e-5 28.3688,-12.70115 28.36881,-28.36881 -1e-5,-15.66766 -12.70115,-28.3688 -28.36881,-28.36881 z m 0,6.39429 c 11.14449,1.3e-4 22.25763,10.83003 22.25748,21.97452 -1.3e-4,11.14428 -11.1132,22.16285 -22.25748,22.16299 -11.14428,-1.4e-4 -21.78488,-11.01871 -21.78501,-22.16299 -1.5e-4,-11.14449 10.64052,-21.97439 21.78501,-21.97452 z"
+       style="opacity:1;fill:#ff75ff;fill-opacity:1;stroke:none;stroke-width:23.82684326;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       sodipodi:nodetypes="cccccccccc"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\sellIcon.png"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff75ff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="112.18991"
+       y="177.78535"
+       id="text5745"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\sellIcon.png"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999"><tspan
+         sodipodi:role="line"
+         id="tspan5743"
+         x="112.18991"
+         y="177.78535"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:35.27777863px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#ff75ff;fill-opacity:1;stroke-width:0.26458332">$</tspan></text>
+    <path
+       inkscape:export-ydpi="98.278999"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\UpgradeIcon.png"
+       sodipodi:nodetypes="cccccccccc"
+       style="opacity:1;fill:#ff71ff;fill-opacity:1;stroke:none;stroke-width:23.82684326;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       d="m 251.26595,138.60756 c -15.66766,1e-5 -28.36879,12.70115 -28.36881,28.36881 2e-5,15.66766 12.70115,28.3688 28.36881,28.36881 15.66766,-1e-5 28.3688,-12.70115 28.36881,-28.36881 -1e-5,-15.66766 -12.70115,-28.3688 -28.36881,-28.36881 z m 0,6.39429 c 11.14449,1.3e-4 22.25763,10.83003 22.25748,21.97452 -1.3e-4,11.14428 -11.1132,22.16285 -22.25748,22.16299 -11.14428,-1.4e-4 -21.78488,-11.01871 -21.78501,-22.16299 -1.5e-4,-11.14449 10.64052,-21.97439 21.78501,-21.97452 z"
+       id="path5753"
+       inkscape:connector-curvature="0" />
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:#ff71ff;fill-opacity:1;stroke:#fffff5;stroke-width:0.6011793;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.72516557"
+       id="path5761"
+       sodipodi:sides="3"
+       sodipodi:cx="251.26595"
+       sodipodi:cy="168.17043"
+       sodipodi:r1="19.539871"
+       sodipodi:r2="9.7699366"
+       sodipodi:arg1="0.52359878"
+       sodipodi:arg2="1.5707963"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 268.18798,177.94036 -33.84405,0 16.92202,-29.30981 z"
+       inkscape:transform-center-x="2.8617538e-06"
+       inkscape:transform-center-y="-3.321596"
+       transform="matrix(1,0,0,0.6799626,0,52.308922)"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\UpgradeIcon.png"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path5763"
+       d="m 352.18559,140.11946 c -15.66766,1e-5 -28.36879,12.70115 -28.36881,28.36881 2e-5,15.66766 12.70115,28.3688 28.36881,28.36881 15.66766,-1e-5 28.3688,-12.70115 28.36881,-28.36881 -10e-6,-15.66766 -12.70115,-28.3688 -28.36881,-28.36881 z m 0,6.39429 c 11.14449,1.3e-4 22.25763,10.83003 22.25748,21.97452 -1.3e-4,11.14428 -11.1132,22.16285 -22.25748,22.16299 -11.14428,-1.4e-4 -21.78488,-11.01871 -21.78501,-22.16299 -1.5e-4,-11.14449 10.64052,-21.97439 21.78501,-21.97452 z"
+       style="opacity:1;fill:#fffdff;fill-opacity:1;stroke:none;stroke-width:23.82684326;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       sodipodi:nodetypes="cccccccccc"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\SpecialAbilityIcon.png"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+    <path
+       sodipodi:type="spiral"
+       style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:4.5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path5767"
+       sodipodi:cx="353.02979"
+       sodipodi:cy="170.37798"
+       sodipodi:expansion="2"
+       sodipodi:revolution="3.9000001"
+       sodipodi:radius="18.174328"
+       sodipodi:argument="-12.861812"
+       sodipodi:t0="0.44999999"
+       d="m 352.06934,166.82521 c 2.15082,-1.02164 4.66281,0.21443 5.59749,2.2992 1.24349,2.77357 -0.35622,5.96603 -3.05139,7.11908 -3.47476,1.48657 -7.4311,-0.52466 -8.82382,-3.90878 -1.75088,-4.25443 0.71975,-9.05807 4.87137,-10.71173 5.1126,-2.03643 10.84694,0.94149 12.78281,5.93917 2.34321,6.04925 -1.18989,12.7977 -7.11218,15.03705 -7.06442,2.67122 -14.91037,-1.46495 -17.47445,-8.39039 -3.02048,-8.15812 1.76667,-17.18496 9.77381,-20.09503 5.06944,-1.84241 10.81487,-1.11716 15.35275,1.76339"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\SpecialAbilityIcon.png"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path5769"
+       d="m 251.26595,209.66708 c -15.66766,1e-5 -28.36879,12.70115 -28.36881,28.36881 2e-5,15.66766 12.70115,28.3688 28.36881,28.36881 15.66766,-10e-6 28.3688,-12.70115 28.36881,-28.36881 -1e-5,-15.66766 -12.70115,-28.3688 -28.36881,-28.36881 z m 0,6.39429 c 11.14449,1.3e-4 22.25763,10.83003 22.25748,21.97452 -1.3e-4,11.14428 -11.1132,22.16285 -22.25748,22.16299 -11.14428,-1.4e-4 -21.78488,-11.01871 -21.78501,-22.16299 -1.5e-4,-11.14449 10.64052,-21.97439 21.78501,-21.97452 z"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:23.82684326;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       sodipodi:nodetypes="cccccccccc"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\TickIcon.png"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.05049157;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 235.32092,239.09742 c -0.28238,0.27465 -0.2886,0.72298 -0.014,1.00535 l 9.80352,10.07898 c 0.27465,0.28237 0.72299,0.28858 1.00535,0.014 l 21.09511,-20.51857 c 0.28237,-0.27465 0.28874,-0.72314 0.0141,-1.00552 l -2.9154,-2.99731 -18.45882,17.95434 c -0.2241,0.21799 -0.58002,0.21305 -0.79799,-0.011 l -6.99035,-7.18677 z"
+       id="rect5773"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\TickIcon.png"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+    <path
+       inkscape:export-ydpi="98.278999"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\CancelIcon.png"
+       sodipodi:nodetypes="cccccccccc"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.536;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       d="m 343.87012,209.66708 c -15.66766,1e-5 -28.36879,12.70115 -28.36881,28.36881 2e-5,15.66766 12.70115,28.3688 28.36881,28.36881 15.66766,-10e-6 28.3688,-12.70115 28.36881,-28.36881 -10e-6,-15.66766 -12.70115,-28.3688 -28.36881,-28.36881 z m 0,6.39429 c 11.14449,1.3e-4 22.25763,10.83003 22.25748,21.97452 -1.3e-4,11.14428 -11.1132,22.16285 -22.25748,22.16299 -11.14428,-1.4e-4 -21.78488,-11.01871 -21.78501,-22.16299 -1.5e-4,-11.14449 10.64052,-21.97439 21.78501,-21.97452 z"
+       id="path5786"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.536;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 330.13886,227.72958 10.03908,10.03908 c 0.24438,0.24438 0.24434,0.63802 0,0.88236 l -10.03909,10.0391 3.81837,3.81837 10.03909,-10.0391 c 0.24437,-0.24436 0.63781,-0.24455 0.88218,-1.8e-4 l 9.32314,9.32315 3.98756,-3.98756 -9.32315,-9.32315 c -0.24436,-0.24437 -0.24418,-0.6378 2e-4,-0.88218 l 9.2955,-9.95696 -3.81837,-3.81837 -9.2955,9.95696 c -0.23584,0.25263 -0.63799,0.24439 -0.88237,0 l -10.03908,-10.03908 z"
+       id="rect5790"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csscccscccsccsccc"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\CancelIcon.png"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+  </g>
+</svg>

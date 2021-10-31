@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="weapona.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient993"
+       inkscape:collect="always">
+      <stop
+         id="stop989"
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:0.9137255" />
+      <stop
+         id="stop991"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:0" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient987"
+       inkscape:collect="always">
+      <stop
+         id="stop983"
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:0.9137255" />
+      <stop
+         id="stop985"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:0" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient969"
+       inkscape:collect="always">
+      <stop
+         id="stop965"
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:0.9137255" />
+      <stop
+         id="stop967"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:0" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient841">
+      <stop
+         style="stop-color:#ff64ff;stop-opacity:0.9137255"
+         offset="0"
+         id="stop837" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0"
+         offset="1"
+         id="stop839" />
+    </linearGradient>
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect5784"
+       is_visible="true"
+       pattern="#rect5800"
+       copytype="single"
+       prop_scale="1"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect5747"
+       is_visible="true"
+       pattern="#rect5744"
+       copytype="single"
+       prop_scale="1"
+       scale_y_rel="false"
+       spacing="20"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient841"
+       id="radialGradient845"
+       cx="39.849884"
+       cy="146.2065"
+       fx="39.849884"
+       fy="146.2065"
+       r="27.127855"
+       gradientTransform="matrix(69.838067,0,0,0.09613338,-2743.189,203.61908)"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient969"
+       id="radialGradient864"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(69.838067,0,0,0.09613338,-2743.3213,160.46163)"
+       cx="39.849884"
+       cy="146.2065"
+       fx="39.849884"
+       fy="146.2065"
+       r="27.127855" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient987"
+       id="radialGradient905"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(69.838067,0,0,0.09613338,-2743.189,175.74287)"
+       cx="39.849884"
+       cy="146.2065"
+       fx="39.849884"
+       fy="146.2065"
+       r="27.127855" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient993"
+       id="radialGradient941"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(69.838067,0,0,0.09613338,-2743.189,190.35954)"
+       cx="39.849884"
+       cy="146.2065"
+       fx="39.849884"
+       fy="146.2065"
+       r="27.127855" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8284272"
+     inkscape:cx="164.56617"
+     inkscape:cy="441.72398"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="986"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-nodes="false"
+     inkscape:snap-others="false"
+     inkscape:snap-global="true"
+     inkscape:snap-bbox="true" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       inkscape:export-ydpi="98.278999"
+       inkscape:export-xdpi="98.278999"
+       r="12.851191"
+       cy="53.06765"
+       cx="140.17455"
+       id="circle5778"
+       style="opacity:1;fill:#dedede;fill-opacity:1;stroke:none;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\shineball.png" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path5780"
+       d="m 150.15025,54.174193 c -0.44825,3.445799 -2.77032,6.470601 -5.85399,7.962167 -0.56514,0.273362 -1.15158,0.0066 -1.33419,-0.50237 -0.18248,-0.508619 0.0586,-1.061295 0.47382,-1.265029 2.48459,-1.219056 4.44294,-3.735994 4.76282,-6.438575 0.0529,-0.447353 0.48828,-0.862735 1.03738,-0.862735 0.54937,0 0.99674,0.471677 0.91416,1.106542 z"
+       style="opacity:1;fill:#ffffff;fill-opacity:0.27777782;stroke:none;stroke-width:21.1533947;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       inkscape:path-effect="#path-effect5784"
+       inkscape:original-d="m 149.23609,53.067651 a 9.061543,9.061543 0 0 1 -9.06155,9.061542 9.061543,9.061543 0 0 1 -9.06155,-9.061542 9.061543,9.061543 0 0 1 9.06155,-9.061542 9.061543,9.061543 0 0 1 9.06155,9.061542 z"
+       transform="rotate(-107.78266,146.63069,44.760635)" />
+    <circle
+       style="opacity:1;fill:#ff41e3;fill-opacity:1;stroke:none;stroke-width:25.40816307;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       id="path817"
+       cx="17.84024"
+       cy="50.844769"
+       r="2.7729213"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+    <circle
+       style="opacity:1;fill:#ff41e3;fill-opacity:1;stroke:none;stroke-width:25.10204124;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       id="circle821"
+       cx="17.84024"
+       cy="68.618187"
+       r="2.7395127"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+    <circle
+       r="2.7729213"
+       cy="50.844769"
+       cx="37.551369"
+       id="circle823"
+       style="opacity:1;fill:#ff41e3;fill-opacity:1;stroke:none;stroke-width:25.40816307;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+    <circle
+       r="2.7395127"
+       cy="68.618187"
+       cx="37.551369"
+       id="circle825"
+       style="opacity:1;fill:#ff41e3;fill-opacity:1;stroke:none;stroke-width:25.10204124;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+    <circle
+       style="opacity:1;fill:#ff41e3;fill-opacity:1;stroke:none;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       id="path815"
+       cx="69.642113"
+       cy="58.119045"
+       r="12.851191"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+    <rect
+       style="opacity:1;fill:#ff41e3;fill-opacity:1;stroke:none;stroke-width:24.31962776;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       id="rect827"
+       width="11.592169"
+       height="4.4099469"
+       x="22.410385"
+       y="82.415977"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\prefabs\weapon\barrel.png" />
+    <circle
+       style="opacity:1;fill:#ff41e3;fill-opacity:1;stroke:none;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       id="path831"
+       cx="34.094677"
+       cy="84.620949"
+       r="2.2206101"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\prefabs\weapon\barrel.png" />
+    <circle
+       r="2.2206101"
+       cy="84.620949"
+       cx="22.375544"
+       id="circle833"
+       style="opacity:1;fill:#ff41e3;fill-opacity:1;stroke:none;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\prefabs\weapon\barrel.png" />
+    <path
+       style="opacity:1;fill:#ff41e3;fill-opacity:1;stroke:none;stroke-width:113.38582611;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       d="m 565.76367,506.45703 a 34.285713,34.285713 0 0 0 -34.28515,34.28516 34.285713,34.285713 0 0 0 4.74023,17.3125 h -0.004 l 0.0137,0.0156 a 34.285713,34.285713 0 0 0 5.88867,7.44141 l 55.59961,70.25 54.6289,-69.02539 a 34.285713,34.285713 0 0 0 11.99024,-25.99414 34.285713,34.285713 0 0 0 -34.28516,-34.28516 34.285713,34.285713 0 0 0 -32.13476,22.45117 34.285713,34.285713 0 0 0 -32.15235,-22.45117 z"
+       transform="scale(0.26458333)"
+       id="path822"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\health.png"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:0.45695364;stroke:none;stroke-width:6.02105713;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       d="m 146.85484,46.320776 a 2.5792584,2.5792584 0 0 1 -2.57926,2.579258 2.5792584,2.5792584 0 0 1 -2.57926,-2.579258 2.5792584,2.5792584 0 0 1 2.57926,-2.579258 2.5792584,2.5792584 0 0 1 2.57926,2.579258 z"
+       id="circle5741"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\shineball.png"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+    <path
+       style="opacity:1;fill:#ff41e3;fill-opacity:1;stroke:none;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       d="m 168.79144,52.524998 h 30.10266 c 1.89848,0 3.42685,1.528378 3.42685,3.426856 0,1.898479 -1.52837,3.426857 -3.42685,3.426857 h -30.10266 c -1.89848,0 -3.42686,-1.528378 -3.42686,-3.426857 0,-1.898478 1.52838,-3.426856 3.42686,-3.426856 z"
+       id="rect5744"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:#ff1b00;fill-opacity:0.45695364;stroke:none;stroke-width:14.51612949;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       d="m 152.63898,68.598434 h 9.37777 c 0.54967,0 0.99219,0.442516 0.99219,0.992188 0,0.549672 -0.44252,0.992188 -0.99219,0.992188 h -9.37777 c -0.54967,0 -0.99219,-0.442516 -0.99219,-0.992188 0,-0.549672 0.44252,-0.992188 0.99219,-0.992188 z"
+       id="rect5800"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="opacity:1;fill:url(#radialGradient845);fill-opacity:1;stroke:none;stroke-width:28.36442566;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216"
+       id="rect833"
+       width="54.255711"
+       height="3.3448982"
+       x="12.722029"
+       y="216.00195"
+       ry="0"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\infernoBeam4.png"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+    <rect
+       inkscape:export-ydpi="98.278999"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\infernoBeam1.png"
+       ry="0"
+       y="172.8445"
+       x="12.589737"
+       height="3.3448982"
+       width="54.255711"
+       id="rect860"
+       style="opacity:1;fill:url(#radialGradient864);fill-opacity:1;stroke:none;stroke-width:28.36442566;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216" />
+    <path
+       inkscape:export-ydpi="98.278999"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\infernoBeam1.png"
+       sodipodi:nodetypes="ccccc"
+       id="path862"
+       inkscape:connector-curvature="0"
+       d="m 12.501562,174.43178 c 3.812814,6.86058 8.568972,5.49277 13.608014,0.0426 5.395211,-6.47758 9.797956,-5.45653 13.608014,0.0426 3.250701,3.97656 6.478231,8.05221 13.511776,0 4.162146,-4.61888 8.476597,-7.24827 13.511776,0"
+       style="fill:none;stroke:#fffff5;stroke-width:0.66500002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.72516555" />
+    <path
+       inkscape:export-ydpi="98.278999"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\infernoBeam1.png"
+       sodipodi:nodetypes="ccccc"
+       id="path873"
+       inkscape:connector-curvature="0"
+       d="m 6.7405611,124.79325 c 3.8128139,6.86058 8.5689719,5.49277 13.6080139,0.0426 5.395211,-6.47758 9.797956,-5.45653 13.608014,0.0426 3.250701,3.97656 6.478231,8.05221 13.511776,0 4.162146,-4.61888 8.476597,-7.24827 13.511776,0"
+       style="fill:none;stroke:#ff68ec;stroke-width:0.66500002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.72516557" />
+    <path
+       style="fill:none;stroke:#ff68ec;stroke-width:0.66500002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.72516557"
+       d="m 60.92186,124.79325 c 3.812814,6.86058 8.568972,5.49277 13.608014,0.0426 5.395211,-6.47758 9.797956,-5.45653 13.608014,0.0426 3.250701,3.97656 6.478239,8.05221 13.511782,0 4.16215,-4.61888 8.4766,-7.24827 13.51178,0"
+       inkscape:connector-curvature="0"
+       id="path875"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\infernoBeam1.png"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+    <path
+       style="fill:none;stroke:#ff68ec;stroke-width:0.66500002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.72516557"
+       d="m 6.7405611,124.79325 c 3.8128139,6.86058 8.5689719,5.49277 13.6080139,0.0426 5.395211,-6.47758 9.797956,-5.45653 13.608014,0.0426 3.250701,3.97656 6.478231,8.05221 13.511776,0 4.162146,-4.61888 8.476597,-7.24827 13.511776,0"
+       inkscape:connector-curvature="0"
+       id="path895"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\infernoBeam1.png"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+    <path
+       inkscape:export-ydpi="98.278999"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\infernoBeam1.png"
+       sodipodi:nodetypes="ccccc"
+       id="path897"
+       inkscape:connector-curvature="0"
+       d="m 60.92186,124.79325 c 3.812814,6.86058 8.568972,5.49277 13.608014,0.0426 5.395211,-6.47758 9.797956,-5.45653 13.608014,0.0426 3.250701,3.97656 6.478239,8.05221 13.511782,0 4.16215,-4.61888 8.4766,-7.24827 13.51178,0"
+       style="fill:none;stroke:#ff68ec;stroke-width:0.66500002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.72516557" />
+    <rect
+       inkscape:export-ydpi="98.278999"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\infernoBeam2.png"
+       ry="0"
+       y="188.12575"
+       x="12.722029"
+       height="3.3448982"
+       width="54.255711"
+       id="rect899"
+       style="opacity:1;fill:url(#radialGradient905);fill-opacity:1;stroke:none;stroke-width:28.36442566;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216" />
+    <path
+       inkscape:export-ydpi="98.278999"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\infernoBeam2.png"
+       inkscape:connector-curvature="0"
+       id="path901"
+       d="m 12.720245,194.36414 c 2.40006,-7.9e-4 4.974978,-1.73869 7.62833,-4.60852 5.395211,-6.47758 9.797954,-5.45653 13.608013,0.0426 3.250702,3.97656 6.478232,8.05221 13.511775,0 4.162148,-4.61888 8.476599,-7.24827 13.511776,0"
+       style="fill:none;stroke:#fffff6;stroke-width:0.66500002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.72516557" />
+    <path
+       inkscape:export-ydpi="98.278999"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\infernoBeam2.png"
+       inkscape:connector-curvature="0"
+       id="path903"
+       d="m 60.92186,189.71302 c 1.825916,3.28546 3.868173,4.68386 6.054235,4.65054"
+       style="fill:none;stroke:#fffff6;stroke-width:0.66500002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.72516557" />
+    <rect
+       inkscape:export-ydpi="98.278999"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\infernoBeam3.png"
+       ry="0"
+       y="202.74242"
+       x="12.722029"
+       height="3.3448982"
+       width="54.255711"
+       id="rect939"
+       style="opacity:1;fill:url(#radialGradient941);fill-opacity:1;stroke:none;stroke-width:28.36442566;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216" />
+    <path
+       inkscape:export-ydpi="98.278999"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\infernoBeam3.png"
+       inkscape:connector-curvature="0"
+       id="path935"
+       d="m 12.720135,204.72583 c 0.110519,-0.11585 0.221182,-0.23371 0.331982,-0.35355 5.395211,-6.47758 9.797956,-5.45653 13.608014,0.0426 3.2507,3.97656 6.47823,8.05221 13.511776,0 4.162147,-4.61888 8.476596,-7.24827 13.511775,0"
+       style="fill:none;stroke:#fffff6;stroke-width:0.66500002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.72516557" />
+    <path
+       inkscape:export-ydpi="98.278999"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\infernoBeam3.png"
+       inkscape:connector-curvature="0"
+       id="path937"
+       d="m 53.6254,204.32968 c 3.747794,6.74358 8.407032,5.53703 13.350467,0.31785"
+       style="fill:none;stroke:#fffff6;stroke-width:0.66500002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.72516557" />
+    <path
+       style="fill:none;stroke:#fffff6;stroke-width:0.66500002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.72516557"
+       d="m 12.724239,213.15342 c 2.344446,0.0288 4.474782,1.67533 6.446406,4.52101 3.250701,3.97656 6.478231,8.05221 13.511775,0 4.162147,-4.61888 8.476597,-7.24827 13.511776,0"
+       id="path954"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\infernoBeam4.png"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+    <path
+       style="fill:none;stroke:#fffff6;stroke-width:0.66500002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.72516557"
+       d="m 46.135916,217.58923 c 3.812813,6.86058 8.568971,5.49277 13.608013,0.0426 2.632655,-3.16081 5.028999,-4.53615 7.235479,-4.47696"
+       id="path945"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="D:\Documents\Unity\TowerDefense\Assets\sprites\infernoBeam4.png"
+       inkscape:export-xdpi="98.278999"
+       inkscape:export-ydpi="98.278999" />
+  </g>
+</svg>
