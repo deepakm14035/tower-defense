@@ -13,22 +13,47 @@ MonoBehaviour:
   m_Name: level
   m_EditorClassIdentifier: 
   rounds:
+  - enemyType: 00000000
+    enemyCount: 0a000000
+    enemyTypeSpawnGap: 8
+    spawnGap: 3
   - enemyType: 0000000001000000
     enemyCount: 0a0000000a000000
     enemyTypeSpawnGap: 3
-    spawnGap: 2
+    spawnGap: 1.75
   - enemyType: 0000000001000000
     enemyCount: 0300000003000000
     enemyTypeSpawnGap: 2
-    spawnGap: 10
+    spawnGap: 1.5
   - enemyType: 0000000001000000
     enemyCount: 0300000003000000
     enemyTypeSpawnGap: 2
-    spawnGap: 10
-  startingCoins: 200
+    spawnGap: 1.2
+  - enemyType: 0000000001000000
+    enemyCount: 0a0000000a000000
+    enemyTypeSpawnGap: 1.8
+    spawnGap: 0.8
+  - enemyType: 0000000001000000
+    enemyCount: 0a0000000a000000
+    enemyTypeSpawnGap: 1.5
+    spawnGap: 0.8
+  - enemyType: 000000000100000002000000
+    enemyCount: 0a0000000a0000000a000000
+    enemyTypeSpawnGap: 1.2
+    spawnGap: 0.8
+  - enemyType: 000000000100000002000000
+    enemyCount: 140000001400000014000000
+    enemyTypeSpawnGap: 1.2
+    spawnGap: 0.5
+  - enemyType: 00000000010000000200000003000000
+    enemyCount: 1e0000001e0000001e00000003000000
+    enemyTypeSpawnGap: 1
+    spawnGap: 0.5
+  startingCoins: 100
   startingHealth: 10
   path:
   - {x: -7, y: 5, z: 0}
   - {x: 0, y: 5, z: 0}
   - {x: 0, y: -5, z: 0}
   - {x: 7, y: -5, z: 0}
+  cameraSize: 10

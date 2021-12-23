@@ -8,12 +8,12 @@ public class DragNDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
     public GameObject towerCreationIcon;
     public Text costText;
     GameObject newTower;
-    UIController uiController;
+    GameMenu uiController;
     bool isEmpty = true;
 
     void Start()
     {
-        uiController = GameObject.FindObjectOfType<UIController>();
+        uiController = GameObject.FindObjectOfType<GameMenu>();
     }
 
     bool isSpaceEmpty()
@@ -54,7 +54,7 @@ public class DragNDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("dragging + "+ Input.mousePosition);
+        //Debug.Log("dragging + "+ Input.mousePosition);
         if(newTower==null && uiController.getCoinCount()> int.Parse(costText.text))
             newTower = Instantiate(towerCreationIcon, Camera.main.ScreenToWorldPoint(Input.mousePosition), Quaternion.identity);
         
@@ -65,12 +65,19 @@ public class DragNDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
             GameObject.Destroy(newTower);
             return;
         }
-        Debug.Log("creating");
+        //Debug.Log("creating");
         //LevelGenerator uic = GameObject.FindObjectOfType<LevelGenerator>();
         GameObject.Destroy(newTower);
-        newTower=Instantiate(towerPrefab, Camera.main.ScreenToWorldPoint(Input.mousePosition),Quaternion.identity);
+        if (GameMenu.instance.getCoinCount() - towerPrefab.GetComponent<Shooter>().cost < 0)
+        {
+            GameMenu.instance.showCoinAlert();
+            return;
+        }
+        newTower = Instantiate(towerPrefab, Camera.main.ScreenToWorldPoint(Input.mousePosition),Quaternion.identity);
+        newTower.GetComponent<Shooter>().source = FindObjectOfType<SoundManager>();
         newTower.transform.position = new Vector3(newTower.transform.position.x, newTower.transform.position.y, 0f);
-        UIController.instance.updateCoinCount(UIController.instance.getCoinCount()-newTower.GetComponent<Shooter>().cost);
+
+        GameMenu.instance.updateCoinCount(GameMenu.instance.getCoinCount()-newTower.GetComponent<Shooter>().cost);
         newTower = null;
     }
 }

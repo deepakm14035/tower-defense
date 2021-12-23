@@ -8,6 +8,8 @@ public class Shooter : MonoBehaviour
     [SerializeField] private GameObject barrel;
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform projectileSpawnPoint;
+    [SerializeField] public SoundManager source;
+    [SerializeField] public AudioClip shootingSound;
     public TowerDetails.Tower towerDetails;
 
     public float range;
@@ -72,7 +74,7 @@ public class Shooter : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        UnityEditor.Handles.DrawWireDisc(transform.position, new Vector3(0f,0f,1f), range);
+        //UnityEditor.Handles.DrawWireDisc(transform.position, new Vector3(0f,0f,1f), range);
     }
 
     // Start is called before the first frame update

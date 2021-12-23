@@ -7,9 +7,17 @@ public class Laser : Shooter
     {
         GetComponent<LineRenderer>().SetPosition(0, transform.position);
         if (isTargetSet)
-            GetComponent<LineRenderer>().SetPosition(1, getTarget().position+(getTarget().position-transform.position).normalized*100f);
+        {
+            GetComponent<LineRenderer>().SetPosition(1, getTarget().position + (getTarget().position - transform.position).normalized * 100f);
+            if (shootingSound != null)
+                source.playAudio(shootingSound,0.2f);
+        }
         else
+        {
             GetComponent<LineRenderer>().SetPosition(1, transform.position);
+            if (shootingSound != null)
+                source.stopAudio();
+        }
     }
 
     void attack()

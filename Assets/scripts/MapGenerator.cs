@@ -10,16 +10,27 @@ public class MapGenerator : MonoBehaviour
     [SerializeField] private GameObject leftDownPathPrefab;
     [SerializeField] private GameObject rightUpPathPrefab;
     [SerializeField] private GameObject rightDownPathPrefab;
+    [SerializeField] private GameObject startPrefab;
+    [SerializeField] private GameObject endPrefab;
 
     // Start is called before the first frame update
-    void Start()
+    public void GenerateLevel(Level level)
     {
-        LineRenderer lr = GetComponent<LineRenderer>();
-        Vector3 startPos = lr.GetPosition(0);
+        //Level level = FindObjectOfType<LevelGenerator>().currentLevel;
+        FindObjectOfType<LevelGenerator>().currentLevel = level;
+        Camera.main.orthographicSize = level.cameraSize;
+        //LineRenderer lr = GetComponent<LineRenderer>();
+        //lr.SetPositions(level.path);
+        int posCount = level.path.Length;
+        Vector3[] arr = level.path;
+        Vector3 startPos = arr[0];
+        Instantiate(startPrefab, startPos, Quaternion.identity);
+        Instantiate(endPrefab, arr[posCount - 1], Quaternion.identity);
         GameObject go;
-        for(int i = 1; i < lr.positionCount; i++)
+        //Debug.Log("position count-" + lr.positionCount);
+        for(int i = 1; i < posCount; i++)
         {
-            Vector3 newpos = lr.GetPosition(i);
+            Vector3 newpos = arr[i];
             if (Mathf.Abs(startPos.x - newpos.x) > 0)
             {
                 Vector3 start, end;
@@ -57,34 +68,49 @@ public class MapGenerator : MonoBehaviour
                     go.transform.parent = transform;
                 }
             }
-            if (i < lr.positionCount - 1)
+            if (i < arr.Length - 1)
             {
                 //Debug.Log(startPos);
                 //Debug.Log(newpos);
                 //Debug.Log(lr.GetPosition(i + 1));
-                if (newpos.x > startPos.x && newpos.y < lr.GetPosition(i + 1).y)
+                if (newpos.x > startPos.x && newpos.y < arr[i + 1].y)
                 {
-                    go=Instantiate(leftUpPathPrefab, newpos+ new Vector3(0.5f,-0.5f,0), Quaternion.identity);
+                    go=Instantiate(rightUpPathPrefab, newpos+ new Vector3(0.5f,-0.5f,0), Quaternion.identity);
                     go.transform.parent = transform;
                 }
-                else if (newpos.x > startPos.x && newpos.y > lr.GetPosition(i + 1).y)
+                else if (newpos.x > startPos.x && newpos.y > arr[i + 1].y)
                 {
                     go = Instantiate(leftDownPathPrefab, newpos + new Vector3(0.5f, 0.5f, 0), Quaternion.identity);
                     go.transform.parent = transform;
                 }
-                else if (newpos.y < startPos.y && newpos.x < lr.GetPosition(i + 1).x)
+                else if (newpos.x < startPos.x && newpos.y < arr[i + 1].y)
                 {
                     go = Instantiate(rightUpPathPrefab, newpos + new Vector3(-0.5f, -0.5f, 0), Quaternion.identity);
                     go.transform.parent = transform;
                 }
-                else if (newpos.y < startPos.y && newpos.x > lr.GetPosition(i + 1).x)
+                else if (newpos.x < startPos.x && newpos.y > arr[i + 1].y)
                 {
                     go = Instantiate(rightDownPathPrefab, newpos + new Vector3(-0.5f, 0.5f, 0), Quaternion.identity);
                     go.transform.parent = transform;
                 }
-                
+                else if (newpos.y < startPos.y && newpos.x < arr[i + 1].x)
+                {
+                    go = Instantiate(rightUpPathPrefab, newpos + new Vector3(-0.5f, -0.5f, 0), Quaternion.identity);
+                    go.transform.parent = transform;
+                }
+                else if (newpos.y < startPos.y && newpos.x > arr[i + 1].x)
+                {
+                    go = Instantiate(leftUpPathPrefab, newpos + new Vector3(0.5f, -0.5f, 0), Quaternion.identity);
+                    go.transform.parent = transform;
+                }
+                else if (newpos.y > startPos.y && newpos.x < arr[i + 1].x)
+                {
+                    go = Instantiate(rightDownPathPrefab, newpos + new Vector3(-0.5f, 0.5f, 0), Quaternion.identity);
+                    go.transform.parent = transform;
+                }
+
             }
-            startPos = lr.GetPosition(i);
+            startPos = arr[i];
         }
     }
 

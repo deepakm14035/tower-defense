@@ -4,27 +4,31 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    LineRenderer positions;
+    //LineRenderer positions;
     [SerializeField] int m_currentIndex = 0;
     [SerializeField] private float m_speed;
     [SerializeField] private Renderer m_healthBar;
     [SerializeField] private GameObject m_onDestroyPS;
+    [SerializeField] public SoundManager source;
+    [SerializeField] public AudioClip dyingSound;
     public float m_speedUpdated;
     public float m_health;
     [SerializeField] private int m_coinReward;
     [SerializeField] private int m_damage;
-    UIController m_UIControllerObj;
+    GameMenu m_UIControllerObj;
     public float distanceCovered;
     public float maxHealth;
     static float totalLength = 0;
 
      void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("triggering");
-        Debug.Log(gameObject.name+", "+collision.gameObject.name);
+        //Debug.Log("triggering");
+        //Debug.Log(gameObject.name+", "+collision.gameObject.name);
         if (collision.gameObject.tag.Equals("projectile"))
         {
             DamageEnemy(collision.gameObject.GetComponent<Projectile>().damage);
+            if (collision.gameObject.GetComponent<Projectile>().shootingSound != null)
+                source.playAudio(collision.gameObject.GetComponent<Projectile>().shootingSound,1.0f);
             collision.gameObject.GetComponent<Projectile>().onDestroy();
         }
         if (collision.gameObject.tag.Equals("decelerator"))
@@ -36,10 +40,13 @@ public class Enemy : MonoBehaviour
     public void DamageEnemy(float damage)
     {
         m_health -= damage;
-        Debug.Log(m_health+", "+maxHealth);
+        //Debug.Log(m_health+", "+maxHealth);
         m_healthBar.material.SetFloat("_remainingHealth", m_health / maxHealth);
         if (m_health <= 0f)
         {
+            if (m_UIControllerObj == null)
+                m_UIControllerObj = GameObject.FindObjectOfType<GameMenu>();
+
             m_UIControllerObj.updateCoinCount(m_UIControllerObj.getCoinCount() + m_coinReward);
             //Instantiate(m_onDestroyPS, transform.position, Quaternion.Euler(90f,0f,0f));
             GameObject.Destroy(gameObject);
@@ -57,16 +64,17 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_UIControllerObj = GameObject.FindObjectOfType<UIController>();
+        m_UIControllerObj = GameObject.FindObjectOfType<GameMenu>();
         distanceCovered = 0f;
         maxHealth = m_health;
-        positions = GameObject.FindGameObjectWithTag("path").GetComponent<LineRenderer>();
+        //positions = GameObject.FindGameObjectWithTag("path").GetComponent<LineRenderer>();
+        Vector3[] arr = FindObjectOfType<LevelGenerator>().currentLevel.path;
         m_speedUpdated = m_speed;
         if (totalLength == 0f)
         {
-            for(int i = 0; i < positions.positionCount-1; i++)
+            for(int i = 0; i < arr.Length-1; i++)
             {
-                totalLength += Vector3.Distance(positions.GetPosition(i), positions.GetPosition(i+1));
+                totalLength += Vector3.Distance(arr[i], arr[i+1]);
             }
         }
     }
@@ -74,34 +82,45 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (m_currentIndex < positions.positionCount)
+        Vector3[] arr = FindObjectOfType<LevelGenerator>().currentLevel.path;
+        if (m_currentIndex < arr.Length)
         {
-            if (Vector3.Distance(transform.position, positions.GetPosition(m_currentIndex)) < 0.01f)
+            if (Vector3.Distance(transform.position, arr[m_currentIndex]) < 0.01f)
             {
                 m_currentIndex++;
-                if (m_currentIndex == positions.positionCount)
+                if (m_currentIndex == arr.Length)
                 {
+                    if(m_UIControllerObj==null)
+                        m_UIControllerObj = GameObject.FindObjectOfType<GameMenu>();
+
                     m_UIControllerObj.updateHealthCount(m_UIControllerObj.getHealthCount()- m_damage);
+                    GameMenu.instance.playPlayerHurt();
                     if (m_UIControllerObj.getHealthCount() <= 0)
                     {
                         m_UIControllerObj.showGameOver();
+                        //MenuManagement.MenuManager.Instance.loadMenu(MenuManagement.lo)
                     }
+                    GameObject.Find("Audio Source").GetComponent<SoundManager>().playAudio(dyingSound,1.0f);
+
                     GameObject.Destroy(gameObject);
+                    LevelGenerator lg = FindObjectOfType<LevelGenerator>();
+                    Debug.Log("checking - "+ lg.allRoundsComplete);
+                    
                     return;
                 }
-                Vector3 direction = positions.GetPosition(m_currentIndex) - transform.position;
+                Vector3 direction = arr[m_currentIndex] - transform.position;
                 //transform.LookAt(positions.GetPosition(currentIndex),new Vector3(0,0,1f));
                 float rot_z = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                 //transform.rotation = Quaternion.Euler(0f, 0f, rot_z);
             }
 
-            if (Vector3.Distance(transform.position, positions.GetPosition(m_currentIndex)) >= 0.01f)
+            if (Vector3.Distance(transform.position, arr[m_currentIndex]) >= 0.01f)
             {
-                float distance = (Vector3.Normalize(positions.GetPosition(m_currentIndex) - transform.position) * Time.deltaTime * m_speedUpdated).magnitude;
-                if (distance >= Vector3.Distance(transform.position, positions.GetPosition(m_currentIndex)))
-                    transform.position = positions.GetPosition(m_currentIndex);
+                float distance = (Vector3.Normalize(arr[m_currentIndex] - transform.position) * Time.deltaTime * m_speedUpdated).magnitude;
+                if (distance >= Vector3.Distance(transform.position, arr[m_currentIndex]))
+                    transform.position = arr[m_currentIndex];
                 else
-                    transform.position += Vector3.Normalize(positions.GetPosition(m_currentIndex) - transform.position) * Time.deltaTime * m_speedUpdated;
+                    transform.position += Vector3.Normalize(arr[m_currentIndex] - transform.position) * Time.deltaTime * m_speedUpdated;
                 distanceCovered += Time.deltaTime * m_speedUpdated;
             }
         }

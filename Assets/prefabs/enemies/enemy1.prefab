@@ -101,6 +101,8 @@ MonoBehaviour:
   m_healthBar: {fileID: 8066930226955651900}
   m_onDestroyPS: {fileID: 8011045609953693686, guid: c5318717239f09e43a5afc4d05078756,
     type: 3}
+  shootingSound: {fileID: 0}
+  dyingSound: {fileID: 8300000, guid: bed9013a256f66a4b95721cae6c095bb, type: 3}
   m_speedUpdated: 0
   m_health: 3
   m_coinReward: 5

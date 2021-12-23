@@ -12,14 +12,15 @@ public class Projectile : MonoBehaviour
     public GameObject explosionPrefab;
     public Vector3 displacement;
     public float magnitude;
-
+    public float explosionRange;
+    [SerializeField] public AudioClip shootingSound;
     public void onDestroy()
     {
         for(int i = 0; i < count; i++)
         {
             GameObject go = Instantiate(explosionPrefab,transform.position,transform.rotation);
             go.AddComponent<MoveTo>();
-            go.GetComponent<MoveTo>().target = transform.position + Vector3.up * Random.RandomRange(-1f, 1f) + Vector3.right * Random.RandomRange(-1f, 1f);
+            go.GetComponent<MoveTo>().target = transform.position + Vector3.up * Random.RandomRange(-explosionRange, explosionRange) + Vector3.right * Random.RandomRange(-explosionRange, explosionRange);
         }
     }
 

@@ -19,5 +19,5 @@ public class Level:ScriptableObject
     [SerializeField] public int startingCoins;
     [SerializeField] public int startingHealth;
     [SerializeField] public Vector3[] path;
-
+    [SerializeField] public float cameraSize;
 }
