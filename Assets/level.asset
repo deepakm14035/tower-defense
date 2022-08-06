@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: level
   m_EditorClassIdentifier: 
   rounds:
-  - enemyType: 00000000
-    enemyCount: 0a000000
+  - enemyType: 05000000
+    enemyCount: 03000000
     enemyTypeSpawnGap: 8
     spawnGap: 3
   - enemyType: 0000000001000000

@@ -78,6 +78,20 @@ public class Enemy : MonoBehaviour
             }
         }
     }
+    public Vector3 getMovementDirection()
+    {
+        Vector3[] arr = FindObjectOfType<LevelGenerator>().currentLevel.path;
+        return Vector3.Normalize( arr[m_currentIndex] - transform.position);
+    }
+
+    public void SetCurrentPathIndex(int newIndex)
+    {
+        m_currentIndex = newIndex;
+    }
+    public int getCurrentPathIndex()
+    {
+        return m_currentIndex;
+    }
 
     // Update is called once per frame
     void Update()
