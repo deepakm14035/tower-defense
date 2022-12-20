@@ -20,7 +20,10 @@ public class DragNDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
     {
         RaycastHit2D res = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector3.forward, 20f, 1 << LayerMask.NameToLayer("tower"));
         Debug.DrawLine(Camera.main.ScreenToWorldPoint(Input.mousePosition) - Vector3.forward * 5f, Camera.main.ScreenToWorldPoint(Input.mousePosition) - Vector3.forward * 5f + Vector3.forward * 20f);
-        return res.collider == null || res.collider.gameObject.tag.Equals("decelerator");
+        return res.collider == null || 
+            res.collider.gameObject.tag.Equals("decelerator") || 
+            res.collider.gameObject.tag.Equals("spell") ||
+            (tag=="spellIcon" && res.collider.gameObject.tag.Equals("tower"));
     }
 
     void changeColor(Vector3 color)
@@ -68,16 +71,16 @@ public class DragNDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
         //Debug.Log("creating");
         //LevelGenerator uic = GameObject.FindObjectOfType<LevelGenerator>();
         GameObject.Destroy(newTower);
-        if (GameMenu.instance.getCoinCount() - towerPrefab.GetComponent<Shooter>().cost < 0)
+        if (GameMenu.instance.getCoinCount() - towerPrefab.GetComponent<BuyableItem>().cost < 0)
         {
             GameMenu.instance.showCoinAlert();
             return;
         }
         newTower = Instantiate(towerPrefab, Camera.main.ScreenToWorldPoint(Input.mousePosition),Quaternion.identity);
-        newTower.GetComponent<Shooter>().source = FindObjectOfType<SoundManager>();
+        newTower.GetComponent<BuyableItem>().source = FindObjectOfType<SoundManager>();
         newTower.transform.position = new Vector3(newTower.transform.position.x, newTower.transform.position.y, 0f);
 
-        GameMenu.instance.updateCoinCount(GameMenu.instance.getCoinCount()-newTower.GetComponent<Shooter>().cost);
+        GameMenu.instance.updateCoinCount(GameMenu.instance.getCoinCount()-newTower.GetComponent<BuyableItem>().cost);
         newTower = null;
     }
 }

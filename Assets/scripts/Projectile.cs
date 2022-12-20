@@ -15,6 +15,8 @@ public class Projectile : MonoBehaviour
     public float explosionRange;
     public float rotationSpeed=100.0f;
     [SerializeField] public AudioClip shootingSound;
+
+    bool damageModified=false;
     public void onDestroy()
     {
         for(int i = 0; i < count; i++)
@@ -24,6 +26,14 @@ public class Projectile : MonoBehaviour
             go.GetComponent<MoveTo>().target = transform.position + Vector3.up * Random.RandomRange(-explosionRange, explosionRange) + Vector3.right * Random.RandomRange(-explosionRange, explosionRange);
         }
         GameObject.Destroy(gameObject);
+    }
+
+    public void MultiplyDamage(float multiplier)
+    {
+        if(damageModified) return;
+        damage *= multiplier;
+        damageModified = true;
+        transform.localScale *= multiplier;
     }
 
     // Start is called before the first frame update

@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shooter : MonoBehaviour
+public class Shooter : BuyableItem
 {
-    public GameObject icon;
     [SerializeField] private GameObject barrel;
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform projectileSpawnPoint;
-    [SerializeField] public SoundManager source;
     [SerializeField] public AudioClip shootingSound;
     public TowerDetails.Tower towerDetails;
 
@@ -16,7 +14,6 @@ public class Shooter : MonoBehaviour
     public float damage;
     [SerializeField] private float rotateSpeed;
     public float timeBetweenShots;
-    public int cost;
     public int totalCost;
     public int currentLevel=1;
     public bool isTargetSet = false;

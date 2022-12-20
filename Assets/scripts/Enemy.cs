@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     //LineRenderer positions;
     [SerializeField] int m_currentIndex = 0;
-    [SerializeField] private float m_speed;
+    public float m_speed;
     [SerializeField] private Renderer m_healthBar;
     [SerializeField] private GameObject m_onDestroyPS;
     [SerializeField] public SoundManager source;
@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
         {
             DamageEnemy(collision.gameObject.GetComponent<Projectile>().damage);
             if (collision.gameObject.GetComponent<Projectile>().shootingSound != null)
-                source.playAudio(collision.gameObject.GetComponent<Projectile>().shootingSound,1.0f);
+                source.playAudio(collision.gameObject.GetComponent<Projectile>().shootingSound,0.3f);
             collision.gameObject.GetComponent<Projectile>().onDestroy();
         }
         if (collision.gameObject.tag.Equals("decelerator"))
@@ -81,6 +81,7 @@ public class Enemy : MonoBehaviour
     public Vector3 getMovementDirection()
     {
         Vector3[] arr = FindObjectOfType<LevelGenerator>().currentLevel.path;
+        if(m_currentIndex>=arr.Length) m_currentIndex=arr.Length-1;
         return Vector3.Normalize( arr[m_currentIndex] - transform.position);
     }
 
@@ -114,7 +115,7 @@ public class Enemy : MonoBehaviour
                         m_UIControllerObj.showGameOver();
                         //MenuManagement.MenuManager.Instance.loadMenu(MenuManagement.lo)
                     }
-                    GameObject.Find("Audio Source").GetComponent<SoundManager>().playAudio(dyingSound,1.0f);
+                    GameObject.Find("Audio Source").GetComponent<SoundManager>().playAudio(dyingSound,0.3f);
 
                     GameObject.Destroy(gameObject);
                     LevelGenerator lg = FindObjectOfType<LevelGenerator>();

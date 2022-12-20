@@ -9,6 +9,9 @@ TagManager:
   - projectile
   - decelerator
   - pathType
+  - spell
+  - spellIcon
+  - tower
   layers:
   - Default
   - TransparentFX

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//collects energy and stays weak for some x seconds. then uses extra power for next x seconds 
 public class Depositor : Shooter
 {
     float timeStored = 0f;

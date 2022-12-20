@@ -35,7 +35,9 @@ public class GameMenu : Menu<GameMenu>
 
 
     public GameObject[] towers;
+    public GameObject[] spells;
     public GameObject[] placeholderRows;
+    public GameObject[] spellPlaceholderRows;
     public Sprite[] towerUpgradeSprites;
     public GameObject upgradePS;
     public GameObject towerEditPanelBG;
@@ -277,6 +279,17 @@ public class GameMenu : Menu<GameMenu>
             go.GetComponent<DragNDrop>().costText.text = towers[i].GetComponent<Shooter>().cost+"";
             towers[i].GetComponent<Shooter>().towerDetails = towerDetails.towers[i];
             if (i > 0 && (i+1) % towersPerRow == 0)
+                rowNum++;
+        }
+
+        rowNum = 0;
+        for (int i = 0; i < spells.Length; i++)
+        {
+            GameObject go = Instantiate(spells[i].GetComponent<Spell>().icon, spellPlaceholderRows[rowNum].transform);
+            go.GetComponent<DragNDrop>().towerPrefab = spells[i];
+            go.GetComponent<DragNDrop>().costText.text = spells[i].GetComponent<Spell>().cost + "";
+            //spells[i].GetComponent<Shooter>().towerDetails = towerDetails.towers[i];
+            if (i > 0 && (i + 1) % towersPerRow == 0)
                 rowNum++;
         }
     }

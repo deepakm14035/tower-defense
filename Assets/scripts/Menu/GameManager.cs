@@ -51,6 +51,10 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(2f);
         }
     }
+    public int getLevelProgress(int world, int level)
+    {
+        return 0;
+    }
 
     IEnumerator timerForGameStart(float timer)
     {

@@ -25,15 +25,20 @@ namespace MenuManagement
             GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
         }
 
-        public void playLevel(int level)
+        /*public void playLevel(int level)
         {
             MenuManager menuManager = GameObject.FindObjectOfType<MenuManager>();
             menuManager.loadMenu(GameMenu.Instance, 1f, false);
             GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
             gameManager.loadGame(level);
+        }*/
+
+        public void loadLevelSelector()
+        {
+            MenuManager menuManager = GameObject.FindObjectOfType<MenuManager>();
+            LevelSelectionMenu.Instance.setup();
+            menuManager.loadMenu(LevelSelectionMenu.Instance, 1f, false);
         }
-
-
 
     }
 }

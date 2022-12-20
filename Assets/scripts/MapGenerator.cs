@@ -12,6 +12,9 @@ public class MapGenerator : MonoBehaviour
     [SerializeField] private GameObject rightDownPathPrefab;
     [SerializeField] private GameObject startPrefab;
     [SerializeField] private GameObject endPrefab;
+    [SerializeField] private GameObject newPathPrefab;
+
+    public bool useNewPath = true;
 
     // Start is called before the first frame update
     public void GenerateLevel(Level level)
@@ -31,7 +34,18 @@ public class MapGenerator : MonoBehaviour
         for(int i = 1; i < posCount; i++)
         {
             Vector3 newpos = arr[i];
-            if (Mathf.Abs(startPos.x - newpos.x) > 0)
+            if(Mathf.Abs(startPos.x - newpos.x) > 0 && Mathf.Abs(startPos.y - newpos.y) > 0)
+            {
+                Vector3 start, end;
+                start = startPos;
+                end = newpos;
+                go = Instantiate(newPathPrefab, start + (end - start) / 2f, Quaternion.identity);
+                go.GetComponent<SpriteRenderer>().size = new Vector2(Vector3.Magnitude( end - start),1f);
+                go.transform.rotation= Quaternion.Euler(0,0, Mathf.Rad2Deg * Mathf.Atan((end.y-start.y)/(end.x-start.x)));
+                Debug.Log(((end.y - start.y) / (end.x - start.x))+", "+ Mathf.Rad2Deg * Mathf.Atan((end.y - start.y) / (end.x - start.x)));
+                go.transform.parent = transform;
+            }
+            else if (Mathf.Abs(startPos.x - newpos.x) > 0)
             {
                 Vector3 start, end;
                 if(startPos.x < newpos.x)
@@ -43,9 +57,16 @@ public class MapGenerator : MonoBehaviour
                     start = newpos;
                     end = startPos;
                 }
-                for (float x = start.x; x <= end.x; x++)
-                {
-                    go=Instantiate(horizontalPathPrefab,new Vector3(x,start.y,0f),Quaternion.identity);
+                if (!useNewPath) {
+                    for (float x = start.x; x <= end.x; x++)
+                    {
+                        go = Instantiate(horizontalPathPrefab, new Vector3(x, start.y, 0f), Quaternion.identity);
+                        go.transform.parent = transform;
+                    }
+                }
+                else {
+                    go = Instantiate(newPathPrefab, new Vector3(start.x + (end.x - start.x) / 2f, start.y, 0f), Quaternion.identity);
+                    go.GetComponent<SpriteRenderer>().size = new Vector2(end.x - start.x+1f, 1f);
                     go.transform.parent = transform;
                 }
             }
@@ -62,50 +83,64 @@ public class MapGenerator : MonoBehaviour
                     start = newpos;
                     end = startPos;
                 }
-                for (float y = start.y; y <= end.y; y++)
+                if (!useNewPath) {
+                    for (float y = start.y; y <= end.y; y++)
+                    {
+                        go = Instantiate(verticalPathPrefab, new Vector3(start.x, y, 0f), Quaternion.identity);
+                        go.transform.parent = transform;
+                    }
+                }
+                else
                 {
-                    go = Instantiate(verticalPathPrefab, new Vector3(start.x, y, 0f), Quaternion.identity);
+                    go = Instantiate(newPathPrefab, new Vector3(start.x, start.y + (end.y - start.y)/2f, 0f), Quaternion.identity);
+                    go.GetComponent<SpriteRenderer>().size = new Vector2(1f,end.y-start.y+1f);
                     go.transform.parent = transform;
                 }
+
             }
             if (i < arr.Length - 1)
             {
                 //Debug.Log(startPos);
                 //Debug.Log(newpos);
                 //Debug.Log(lr.GetPosition(i + 1));
-                if (newpos.x > startPos.x && newpos.y < arr[i + 1].y)
+                if (newpos.x > startPos.x && newpos.y < arr[i + 1].y && !useNewPath)
                 {
                     go=Instantiate(rightUpPathPrefab, newpos+ new Vector3(0.5f,-0.5f,0), Quaternion.identity);
                     go.transform.parent = transform;
                 }
-                else if (newpos.x > startPos.x && newpos.y > arr[i + 1].y)
+                else if (newpos.x > startPos.x && newpos.y > arr[i + 1].y && !useNewPath)
                 {
                     go = Instantiate(leftDownPathPrefab, newpos + new Vector3(0.5f, 0.5f, 0), Quaternion.identity);
                     go.transform.parent = transform;
                 }
-                else if (newpos.x < startPos.x && newpos.y < arr[i + 1].y)
+                else if (newpos.x < startPos.x && newpos.y < arr[i + 1].y && !useNewPath)
                 {
                     go = Instantiate(rightUpPathPrefab, newpos + new Vector3(-0.5f, -0.5f, 0), Quaternion.identity);
                     go.transform.parent = transform;
                 }
-                else if (newpos.x < startPos.x && newpos.y > arr[i + 1].y)
+                else if (newpos.x < startPos.x && newpos.y > arr[i + 1].y && !useNewPath)
                 {
                     go = Instantiate(rightDownPathPrefab, newpos + new Vector3(-0.5f, 0.5f, 0), Quaternion.identity);
                     go.transform.parent = transform;
                 }
-                else if (newpos.y < startPos.y && newpos.x < arr[i + 1].x)
+                else if (newpos.y < startPos.y && newpos.x < arr[i + 1].x && !useNewPath)
                 {
                     go = Instantiate(rightUpPathPrefab, newpos + new Vector3(-0.5f, -0.5f, 0), Quaternion.identity);
                     go.transform.parent = transform;
                 }
-                else if (newpos.y < startPos.y && newpos.x > arr[i + 1].x)
+                else if (newpos.y < startPos.y && newpos.x > arr[i + 1].x && !useNewPath)
                 {
                     go = Instantiate(leftUpPathPrefab, newpos + new Vector3(0.5f, -0.5f, 0), Quaternion.identity);
                     go.transform.parent = transform;
                 }
-                else if (newpos.y > startPos.y && newpos.x < arr[i + 1].x)
+                else if (newpos.y > startPos.y && newpos.x < arr[i + 1].x && !useNewPath)
                 {
                     go = Instantiate(rightDownPathPrefab, newpos + new Vector3(-0.5f, 0.5f, 0), Quaternion.identity);
+                    go.transform.parent = transform;
+                }
+                else
+                {
+                    go = Instantiate(newPathPrefab, newpos, Quaternion.identity);
                     go.transform.parent = transform;
                 }
 

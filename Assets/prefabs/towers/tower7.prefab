@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: -8005924365682135800}
   m_Layer: 9
   m_Name: tower7
-  m_TagString: Untagged
+  m_TagString: tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -300,12 +300,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03e874559303a324ca65b71719147d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  source: {fileID: 0}
   icon: {fileID: 6950578426088342530, guid: 9b27e543c36818346bd50cf8d84ea5df, type: 3}
+  cost: 80
   barrel: {fileID: 1553837524772789316}
   projectilePrefab: {fileID: 8850946745484683202, guid: 9162b53497dbee7438911d3267811d30,
     type: 3}
   projectileSpawnPoint: {fileID: 5311234845011777915}
-  source: {fileID: 0}
   shootingSound: {fileID: 8300000, guid: 864d77f64b024394687caa2debde35c1, type: 3}
   towerDetails:
     levels:
@@ -324,10 +325,9 @@ MonoBehaviour:
     cost: 120
     sellPercent: 0.7
   range: 4.5
-  damage: 2.5
+  damage: 4
   rotateSpeed: 30
   timeBetweenShots: 5
-  cost: 80
   totalCost: 0
   currentLevel: 0
   isTargetSet: 0
