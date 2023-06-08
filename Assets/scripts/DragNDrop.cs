@@ -2,18 +2,18 @@
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DragNDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
+public class DragNDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject towerPrefab;
     public GameObject towerCreationIcon;
     public Text costText;
     GameObject newTower;
-    GameMenu uiController;
+    GameMenu gameMenu;
     bool isEmpty = true;
 
     void Start()
     {
-        uiController = GameObject.FindObjectOfType<GameMenu>();
+        gameMenu = GameObject.FindObjectOfType<GameMenu>();
     }
 
     bool isSpaceEmpty()
@@ -58,7 +58,7 @@ public class DragNDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
     public void OnPointerDown(PointerEventData eventData)
     {
         //Debug.Log("dragging + "+ Input.mousePosition);
-        if(newTower==null && uiController.getCoinCount()> int.Parse(costText.text))
+        if(newTower==null && gameMenu.getCoinCount()> int.Parse(costText.text))
             newTower = Instantiate(towerCreationIcon, Camera.main.ScreenToWorldPoint(Input.mousePosition), Quaternion.identity);
         
     }
@@ -82,5 +82,16 @@ public class DragNDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
 
         GameMenu.instance.updateCoinCount(GameMenu.instance.getCoinCount()-newTower.GetComponent<BuyableItem>().cost);
         newTower = null;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        gameMenu.SetItemInfo(towerPrefab.GetComponent<BuyableItem>());
+        gameMenu.SetDetailsVisibility(true);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        gameMenu.SetDetailsVisibility(false);
     }
 }

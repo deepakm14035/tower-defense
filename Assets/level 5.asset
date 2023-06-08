@@ -10,50 +10,52 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a03a41a966cc6de41ae8c34d216be85d, type: 3}
-  m_Name: level
+  m_Name: level 5
   m_EditorClassIdentifier: 
   rounds:
   - enemyType: 00000000
-    enemyCount: 03000000
-    enemyTypeSpawnGap: 1
-    spawnGap: 3
+    enemyCount: 0a000000
+    enemyTypeSpawnGap: 4
+    spawnGap: 2
   - enemyType: 0000000001000000
     enemyCount: 0a0000000a000000
     enemyTypeSpawnGap: 3
-    spawnGap: 1.75
+    spawnGap: 2
+  - enemyType: 0000000001000000
+    enemyCount: 0300000003000000
+    enemyTypeSpawnGap: 2
+    spawnGap: 1
   - enemyType: 0000000001000000
     enemyCount: 0300000003000000
     enemyTypeSpawnGap: 2
     spawnGap: 1.5
   - enemyType: 0000000001000000
-    enemyCount: 0300000003000000
-    enemyTypeSpawnGap: 2
-    spawnGap: 1.2
-  - enemyType: 0000000001000000
     enemyCount: 0a0000000a000000
     enemyTypeSpawnGap: 1.8
-    spawnGap: 0.8
+    spawnGap: 1.5
   - enemyType: 0000000001000000
     enemyCount: 0a0000000a000000
     enemyTypeSpawnGap: 1.5
-    spawnGap: 0.8
+    spawnGap: 1.2
   - enemyType: 000000000100000002000000
     enemyCount: 0a0000000a0000000a000000
     enemyTypeSpawnGap: 1.2
-    spawnGap: 0.8
+    spawnGap: 1.2
   - enemyType: 000000000100000002000000
     enemyCount: 140000001400000014000000
     enemyTypeSpawnGap: 1.2
-    spawnGap: 0.5
+    spawnGap: 1
   - enemyType: 00000000010000000200000003000000
     enemyCount: 1e0000001e0000001e00000003000000
     enemyTypeSpawnGap: 1
     spawnGap: 0.5
-  startingCoins: 100
+  startingCoins: 250
   startingHealth: 10
   path:
-  - {x: -7, y: 5, z: 0}
-  - {x: 0, y: 5, z: 0}
-  - {x: 0, y: -5, z: 0}
-  - {x: 7, y: -5, z: 0}
-  cameraSize: 10
+  - {x: -12, y: 3, z: 0}
+  - {x: 10, y: 3, z: 0}
+  - {x: -6, y: -10, z: 0}
+  - {x: 1, y: 10, z: 0}
+  - {x: 8, y: -10, z: 0}
+  - {x: -11, y: 6, z: 0}
+  cameraSize: 14

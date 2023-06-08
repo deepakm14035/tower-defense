@@ -131,6 +131,8 @@ MonoBehaviour:
   source: {fileID: 0}
   icon: {fileID: 6950578426088342530, guid: 8ffa8177ef7b8be4089a402939c872d4, type: 3}
   cost: 30
+  name: Freeze Spell
+  description: Freeze Spell
   range: 3
   duration: 1
   intensity: 1

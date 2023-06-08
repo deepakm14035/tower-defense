@@ -24,13 +24,15 @@ tower-
 -reduce speed of all enemies in range
 -teleport to another position within range
 -weighing scale - on button click, increasing speed and life of enemy for 
-10 seconds, on another button click, increase attack speed and damage
+ 10 seconds, on another button click, increase attack speed and damage
 -unlimited range, takes long time to completely destroy enemy in one shot
 -box/line - if any projectile passes through that, their damage and speed gets doubled (zora from black clover)
+-a bad tower that generates more money if it destroys enemy
+
 special abilities-
 slow down everything on track
 poison
-
+move any tower to another location
 
      */
 

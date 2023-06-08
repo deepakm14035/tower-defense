@@ -7,6 +7,8 @@ public class BuyableItem : MonoBehaviour
     [SerializeField] public SoundManager source;
     public GameObject icon;
     public int cost;
+    public string name;
+    public string description;
     // Start is called before the first frame update
     void Start()
     {

@@ -230,6 +230,9 @@ MonoBehaviour:
   source: {fileID: 0}
   icon: {fileID: 6950578426088342530, guid: 8323b25fd3b1cec4e9bd64139434d321, type: 3}
   cost: 60
+  name: Laser
+  description: Shoots a beam in a straight line that deals damage to all enemy in
+    its path
   barrel: {fileID: 0}
   projectilePrefab: {fileID: 0}
   projectileSpawnPoint: {fileID: 0}

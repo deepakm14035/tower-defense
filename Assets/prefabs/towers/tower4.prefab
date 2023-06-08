@@ -232,6 +232,8 @@ MonoBehaviour:
   source: {fileID: 0}
   icon: {fileID: 6950578426088342530, guid: 55d956879fcec434f880c4154fbecd26, type: 3}
   cost: 50
+  name: Decelerator
+  description: Any enemy that comes within range of this tower will have slower movement
   barrel: {fileID: 0}
   projectilePrefab: {fileID: 0}
   projectileSpawnPoint: {fileID: 0}

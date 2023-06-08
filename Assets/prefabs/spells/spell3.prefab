@@ -131,6 +131,8 @@ MonoBehaviour:
   source: {fileID: 0}
   icon: {fileID: 6950578426088342530, guid: e7b748d3779d8484a8dcc9d9cc95691e, type: 3}
   cost: 40
+  name: Agility Spell
+  description: Agility Spell
   range: 3
   duration: 5
   intensity: 1

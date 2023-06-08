@@ -131,8 +131,11 @@ MonoBehaviour:
   source: {fileID: 0}
   icon: {fileID: 6950578426088342530, guid: 472b5d2ba9bbee647852f38c67b4f9c4, type: 3}
   cost: 30
+  name: 
+  description: Rage Spell
   range: 3
   duration: 5
   intensity: 1
   applied: 0
+  shooterList: []
   damageIncreasePercent: 2

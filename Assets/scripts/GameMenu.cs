@@ -45,6 +45,8 @@ public class GameMenu : Menu<GameMenu>
     [SerializeField] private Text roundText;
     [SerializeField] private Text healthText;
     [SerializeField] private Text gameplaySpeedText;
+    [SerializeField] private Text itemName;
+    [SerializeField] private Text itemDescription;
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private TowerDetails towerDetails;
     [SerializeField] private TowerDetails.Tower selectedTowerDetails;
@@ -275,8 +277,8 @@ public class GameMenu : Menu<GameMenu>
         for(int i = 0; i < towers.Length; i++)
         {
             GameObject go = Instantiate(towers[i].GetComponent<Shooter>().icon,placeholderRows[rowNum].transform);
-            go.GetComponent<DragNDrop>().towerPrefab = towers[i];
-            go.GetComponent<DragNDrop>().costText.text = towers[i].GetComponent<Shooter>().cost+"";
+            go.GetComponentInChildren<DragNDrop>().towerPrefab = towers[i];
+            go.GetComponentInChildren<DragNDrop>().costText.text = towers[i].GetComponent<Shooter>().cost+"";
             towers[i].GetComponent<Shooter>().towerDetails = towerDetails.towers[i];
             if (i > 0 && (i+1) % towersPerRow == 0)
                 rowNum++;
@@ -286,8 +288,8 @@ public class GameMenu : Menu<GameMenu>
         for (int i = 0; i < spells.Length; i++)
         {
             GameObject go = Instantiate(spells[i].GetComponent<Spell>().icon, spellPlaceholderRows[rowNum].transform);
-            go.GetComponent<DragNDrop>().towerPrefab = spells[i];
-            go.GetComponent<DragNDrop>().costText.text = spells[i].GetComponent<Spell>().cost + "";
+            go.GetComponentInChildren<DragNDrop>().towerPrefab = spells[i];
+            go.GetComponentInChildren<DragNDrop>().costText.text = spells[i].GetComponent<Spell>().cost + "";
             //spells[i].GetComponent<Shooter>().towerDetails = towerDetails.towers[i];
             if (i > 0 && (i + 1) % towersPerRow == 0)
                 rowNum++;
@@ -327,6 +329,18 @@ public class GameMenu : Menu<GameMenu>
                 enableDisableItems(ItemType.Main, false);
             }
         }
+    }
+
+    public void SetItemInfo(BuyableItem item)
+    {
+        itemName.text = item.name;
+        itemDescription.text = item.description;
+    }
+
+    public void SetDetailsVisibility(bool value)
+    {
+        itemName.enabled = value;
+        itemDescription.enabled = value;
     }
         
 }

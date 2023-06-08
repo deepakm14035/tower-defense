@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 7580722886470309693}
   - component: {fileID: -8005924365682135800}
   m_Layer: 9
-  m_Name: tower7
+  m_Name: tower9
   m_TagString: tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -228,7 +228,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a17e6a47fe3fd7949812ed39eec30403, type: 3}
-  m_Color: {r: 0.30980387, g: 0.93333334, b: 0.8280009, a: 1}
+  m_Color: {r: 0.122641504, g: 0.122641504, b: 0.122641504, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -327,10 +327,10 @@ MonoBehaviour:
       cost: 120
     cost: 120
     sellPercent: 0.7
-  range: 4.5
-  damage: 4
+  range: 45
+  damage: 6
   rotateSpeed: 30
-  timeBetweenShots: 5
+  timeBetweenShots: 6
   totalCost: 0
   currentLevel: 0
   isTargetSet: 0

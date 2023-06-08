@@ -230,6 +230,8 @@ MonoBehaviour:
   source: {fileID: 0}
   icon: {fileID: 6950578426088342530, guid: 4ad24a99064c4ed4c9e409cba7e9cd51, type: 3}
   cost: 100
+  name: Inferno
+  description: 'Once it lock on to a target, it increases damage to it exponentially         '
   barrel: {fileID: 6861328996991891882}
   projectilePrefab: {fileID: 0}
   projectileSpawnPoint: {fileID: 6861328998211865716}

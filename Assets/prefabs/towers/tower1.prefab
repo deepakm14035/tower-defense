@@ -188,6 +188,8 @@ MonoBehaviour:
   source: {fileID: 0}
   icon: {fileID: 6950578426088342530, guid: 48ebb1339cfde9141be2f4fde15256b3, type: 3}
   cost: 40
+  name: Basic
+  description: The basic shooter that shoots bullets at regular intervals
   barrel: {fileID: 6861328996991891882}
   projectilePrefab: {fileID: 136360809123859774, guid: c1bdce034c050384aa5db55f243101ec,
     type: 3}
