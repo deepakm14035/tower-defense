@@ -454,6 +454,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1217240ffe61e0a42997400f2805d05c, type: 2}
   - {fileID: 11400000, guid: 93b0084494c096c4c9f559c304045f40, type: 2}
   - {fileID: 11400000, guid: 9ac35829b37779648a381909d05ddaf3, type: 2}
+  - {fileID: 11400000, guid: cbbec2589773d61419cc3d56f61184f5, type: 2}
+  - {fileID: 11400000, guid: 4daf04ced4f25514da68f2a43434d093, type: 2}
   winPS: {fileID: 4932240582112246253, guid: ce67c0cf96f10be42986070abc7837f8, type: 3}
   levelNum: 0
 --- !u!4 &206709525

@@ -110,6 +110,7 @@ MonoBehaviour:
   magnitude: 0
   explosionRange: 2
   rotationSpeed: 3
+  destroyOnEnemyDeath: 0
   shootingSound: {fileID: 8300000, guid: 864d77f64b024394687caa2debde35c1, type: 3}
 --- !u!61 &-2053111038932124212
 BoxCollider2D:

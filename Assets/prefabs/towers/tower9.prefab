@@ -301,11 +301,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 0}
-  icon: {fileID: 6950578426088342530, guid: 9b27e543c36818346bd50cf8d84ea5df, type: 3}
+  icon: {fileID: 6950578426088342530, guid: 4ea8cde954f2aec4cbf5940677f6cc12, type: 3}
   cost: 80
-  name: Rocket shooter
-  description: Throws a projectile that takes time to reach enemy. Deals a lot of
-    damage and has good range
+  name: Sniper
+  description: Can shoot enemy that is far away
   barrel: {fileID: 1553837524772789316}
   projectilePrefab: {fileID: 8850946745484683202, guid: 9162b53497dbee7438911d3267811d30,
     type: 3}

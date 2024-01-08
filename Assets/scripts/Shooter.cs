@@ -27,6 +27,28 @@ public class Shooter : BuyableItem
         return target;
     }
 
+    public Transform getEnemyAtEndOfLine()
+    {
+        Transform newTarget;
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
+        float closestEnemyDistance = 0f;
+        GameObject closestEnemy = null;
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            //if (Vector3.Distance(transform.position, enemies[i].transform.position) < closestEnemyDistance)
+            if (enemies[i] != null && enemies[i].GetComponent<Enemy>().distanceCovered > closestEnemyDistance && Vector3.Distance(transform.position, enemies[i].transform.position) < range)
+            {
+                closestEnemyDistance = enemies[i].GetComponent<Enemy>().distanceCovered;
+                closestEnemy = enemies[i];
+            }
+        }
+        if (closestEnemy != null)
+            newTarget = closestEnemy.transform;
+        else
+            newTarget = null;
+        return newTarget;
+    }
+
     private void setTarget()
     {
         if (target != null)
@@ -38,22 +60,7 @@ public class Shooter : BuyableItem
         }
         if (target == null)
         {
-            GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
-            float closestEnemyDistance = 0f;
-            GameObject closestEnemy=null;
-            for(int i = 0; i < enemies.Length; i++)
-            {
-                //if (Vector3.Distance(transform.position, enemies[i].transform.position) < closestEnemyDistance)
-                if (enemies[i]!=null && enemies[i].GetComponent<Enemy>().distanceCovered > closestEnemyDistance && Vector3.Distance(transform.position, enemies[i].transform.position)<range)
-                    {
-                        closestEnemyDistance = enemies[i].GetComponent<Enemy>().distanceCovered;
-                    closestEnemy = enemies[i];
-                }
-            }
-            if (closestEnemy != null)
-                target = closestEnemy.transform;
-            else
-                target = null;
+            target = getEnemyAtEndOfLine();
         }
         isTargetSet = target != null;
     }

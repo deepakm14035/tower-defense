@@ -14,6 +14,7 @@ public class Projectile : MonoBehaviour
     public float magnitude;
     public float explosionRange;
     public float rotationSpeed=100.0f;
+    public bool destroyOnEnemyDeath = true;
     [SerializeField] public AudioClip shootingSound;
 
     bool damageModified=false;
@@ -36,18 +37,45 @@ public class Projectile : MonoBehaviour
         transform.localScale *= multiplier;
     }
 
+    public Transform getEnemyAtEndOfLine()
+    {
+        Transform newTarget;
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
+        float closestEnemyDistance = 0f;
+        GameObject closestEnemy = null;
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            //if (Vector3.Distance(transform.position, enemies[i].transform.position) < closestEnemyDistance)
+            if (enemies[i] != null && enemies[i].GetComponent<Enemy>().distanceCovered > closestEnemyDistance)
+            {
+                closestEnemyDistance = enemies[i].GetComponent<Enemy>().distanceCovered;
+                closestEnemy = enemies[i];
+            }
+        }
+        if (closestEnemy != null)
+            newTarget = closestEnemy.transform;
+        else
+            newTarget = null;
+        return newTarget;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         transform.rotation = Quaternion.identity;
     }
+    
     // Update is called once per frame
     void Update()
     {
         if (target == null)
         {
-            GameObject.Destroy(gameObject);
-            return ;
+            target = getEnemyAtEndOfLine();
+            if (destroyOnEnemyDeath || target == null) {
+                GameObject.Destroy(gameObject);
+                return;
+            }
+
         }
         Vector3 direction = target.position - transform.position;
         //transform.LookAt(positions.GetPosition(currentIndex),new Vector3(0,0,1f));

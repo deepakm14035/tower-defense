@@ -29,6 +29,7 @@ public class Enemy : MonoBehaviour
             DamageEnemy(collision.gameObject.GetComponent<Projectile>().damage);
             if (collision.gameObject.GetComponent<Projectile>().shootingSound != null)
                 source.playAudio(collision.gameObject.GetComponent<Projectile>().shootingSound,0.3f);
+            
             collision.gameObject.GetComponent<Projectile>().onDestroy();
         }
         if (collision.gameObject.tag.Equals("decelerator"))
