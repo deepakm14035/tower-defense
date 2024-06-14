@@ -49,7 +49,7 @@ MonoBehaviour:
     enemyCount: 1e0000001e0000001e00000003000000
     enemyTypeSpawnGap: 1
     spawnGap: 0.5
-  startingCoins: 250
+  startingCoins: 150
   startingHealth: 10
   path:
   - {x: -10, y: 5, z: 0}
@@ -60,3 +60,4 @@ MonoBehaviour:
   - {x: 8, y: 0.5, z: 0}
   - {x: 8, y: -8, z: 0}
   cameraSize: 11
+  allowedTowers: 00000000010000000200000003000000

@@ -59,3 +59,4 @@ MonoBehaviour:
   - {x: 16, y: -20, z: 0}
   - {x: -22, y: 12, z: 0}
   cameraSize: 28
+  allowedTowers: 000000000100000002000000030000000400000005000000

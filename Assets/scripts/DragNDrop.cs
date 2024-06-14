@@ -10,6 +10,7 @@ public class DragNDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
     GameObject newTower;
     GameMenu gameMenu;
     bool isEmpty = true;
+    private Vector3 mouseDownPosition;
 
     void Start()
     {
@@ -49,6 +50,16 @@ public class DragNDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
         }
         newTower.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         newTower.transform.position = new Vector3(newTower.transform.position.x, newTower.transform.position.y, 0f);
+        var range = 0f;
+        if (towerPrefab.GetComponent<Shooter>() != null)
+        {
+            range = towerPrefab.GetComponent<Shooter>().range;
+        }
+        else if (towerPrefab.GetComponent<Spell>() != null)
+        {
+            range = towerPrefab.GetComponent<Spell>().range;
+        }
+        GameMenu.Instance.SetTowerMoveMode(newTower.transform, range); 
     }
     /*public void OnEndDrag(PointerEventData eventData)
     {
@@ -58,13 +69,16 @@ public class DragNDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
     public void OnPointerDown(PointerEventData eventData)
     {
         //Debug.Log("dragging + "+ Input.mousePosition);
-        if(newTower==null && gameMenu.getCoinCount()> int.Parse(costText.text))
+        mouseDownPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (newTower==null && gameMenu.getCoinCount()> int.Parse(costText.text))
             newTower = Instantiate(towerCreationIcon, Camera.main.ScreenToWorldPoint(Input.mousePosition), Quaternion.identity);
-        
+
+
     }
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (!isSpaceEmpty()) {
+        var newPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (!isSpaceEmpty() || Vector3.Distance(mouseDownPosition, newPosition)<1f ) {
             GameObject.Destroy(newTower);
             return;
         }
@@ -76,12 +90,13 @@ public class DragNDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
             GameMenu.instance.showCoinAlert();
             return;
         }
-        newTower = Instantiate(towerPrefab, Camera.main.ScreenToWorldPoint(Input.mousePosition),Quaternion.identity);
+        newTower = Instantiate(towerPrefab, newPosition, Quaternion.identity);
         newTower.GetComponent<BuyableItem>().source = FindObjectOfType<SoundManager>();
         newTower.transform.position = new Vector3(newTower.transform.position.x, newTower.transform.position.y, 0f);
 
         GameMenu.instance.updateCoinCount(GameMenu.instance.getCoinCount()-newTower.GetComponent<BuyableItem>().cost);
         newTower = null;
+        GameMenu.Instance.enableDisableItems(GameMenu.ItemType.None, false);
     }
 
     public void OnPointerEnter(PointerEventData eventData)

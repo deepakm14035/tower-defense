@@ -15,7 +15,6 @@ public class TowerUIClickHandler : MonoBehaviour, IPointerDownHandler, IPointerU
         {
             _gameMenu = FindObjectOfType<GameMenu>();
         }
-        _gameMenu.handleClick(buttonType);
 
     }
     public void OnPointerUp(PointerEventData eventData)
@@ -24,6 +23,7 @@ public class TowerUIClickHandler : MonoBehaviour, IPointerDownHandler, IPointerU
         {
             _gameMenu = FindObjectOfType<GameMenu>();
         }
+        _gameMenu.handleClick(buttonType);
 
     }
     // Start is called before the first frame update

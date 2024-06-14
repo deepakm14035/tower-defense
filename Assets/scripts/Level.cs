@@ -13,11 +13,13 @@ public class Level:ScriptableObject
         [SerializeField] public int[] enemyCount;
         [SerializeField] public float enemyTypeSpawnGap;
         [SerializeField] public float spawnGap;
-
+        [SerializeField] public int roundCompletionBonus;
     }
     [SerializeField] public Round[] rounds;
     [SerializeField] public int startingCoins;
     [SerializeField] public int startingHealth;
     [SerializeField] public Vector3[] path;
     [SerializeField] public float cameraSize;
+    [SerializeField] public int[] allowedTowers;
+    [SerializeField] public int[] allowedSpells;
 }

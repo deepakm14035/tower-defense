@@ -18,13 +18,13 @@ MonoBehaviour:
     enemyTypeSpawnGap: 1
     spawnGap: 3
   - enemyType: 0000000001000000
-    enemyCount: 0a0000000a000000
+    enemyCount: 0a00000002000000
     enemyTypeSpawnGap: 3
-    spawnGap: 1.75
-  - enemyType: 0000000001000000
-    enemyCount: 0300000003000000
+    spawnGap: 2
+  - enemyType: 01000000
+    enemyCount: 0a000000
     enemyTypeSpawnGap: 2
-    spawnGap: 1.5
+    spawnGap: 4.5
   - enemyType: 0000000001000000
     enemyCount: 0300000003000000
     enemyTypeSpawnGap: 2
@@ -57,3 +57,4 @@ MonoBehaviour:
   - {x: 0, y: -5, z: 0}
   - {x: 7, y: -5, z: 0}
   cameraSize: 10
+  allowedTowers: 0000000001000000

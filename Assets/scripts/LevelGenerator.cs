@@ -16,23 +16,37 @@ random towers every time a user plays
  after getting destroyed, spawns smaller faster enemies
      
 tower-
+                                                                                                +                                   -
 -basic
 -inferno
 -laser
--docking multiple
+-docking multiple                                                                           strong ability/save space      expensive to dock
 -small range, high damage
 -reduce speed of all enemies in range
--teleport to another position within range
+-teleport to another position within range                                                  cover more ground               takes time to teleport
 -weighing scale - on button click, increasing speed and life of enemy for 
  10 seconds, on another button click, increase attack speed and damage
 -unlimited range, takes long time to completely destroy enemy in one shot
--box/line - if any projectile passes through that, their damage and speed gets doubled (zora from black clover)
--a bad tower that generates more money if it destroys enemy
+-box/line - if any projectile passes through that, their damage and speed gets doubled
+-a bad tower that generates more money if it destroys enemy                                     
 
 special abilities-
 slow down everything on track
 poison
 move any tower to another location
+
+
+
+story 2-
+towers are based on elements like earth, fire, water, electricity, plants, wind
+enemies are based on creatures like animals (snow animals, tropical forest animals, swamp animals, desert animals), fishes, birds, robots
+                snow animal     tropical forest animal      swamp       desert      fish    bird        robots
+earth               damage         no effect                no effect   no effect   damage  damage      no effect
+fire                damage          damage                  damage      no effect   damage  damage      both
+water               no effect       no effect               no effect   damage    no effect damage      damage
+electricity         damage          damage                  no effect   no effect   damage  damage      no effect
+plants              damage          no effect               no effect   no effect no effect no effect   damage
+wind                no effect       depends (weight)        damage      no effect damage    slow down   damage
 
      */
 
@@ -41,15 +55,13 @@ public class LevelGenerator : MonoBehaviour
 {
     public bool isGameStarted = false;
     int currentRound = 0;
-    int roundSpawnIndex = 0;
-    int indexInPath = 0;
     public GameObject[] enemies;
     public Level currentLevel;
     [SerializeField] private LineRenderer path;
     [SerializeField] public SoundManager source;
     public bool allRoundsComplete = false;
     bool winPlayed = false;
-
+    public Coroutine EnemySpawner;
 
     public void generateBG(Vector4 rect)
     {
@@ -73,26 +85,26 @@ public class LevelGenerator : MonoBehaviour
                 yield return new WaitForSeconds(currentLevel.rounds[currentRound].enemyTypeSpawnGap);
             }
             GameObject.FindObjectOfType<GameMenu>().updateRoundDetails(currentRound+2,currentLevel.rounds.Length);
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(currentLevel.rounds[currentRound].spawnGap);
         }
         allRoundsComplete = true;
         yield return null;
     }
 
-    public IEnumerator setStartCoins()
+    public void initializeGameParameters()
     {
-        yield return new WaitForSeconds(1f);
-        GameObject.FindObjectOfType<GameMenu>().updateCoinCount(currentLevel.startingCoins);
-        yield return null;
+        //yield return new WaitForSeconds(1f);
+        GameMenu.Instance.updateRoundDetails(1, currentLevel.rounds.Length);
+        GameMenu.Instance.updateHealthCount(currentLevel.startingHealth);
+        GameMenu.Instance.updateCoinCount(currentLevel.startingCoins);
+        GameMenu.Instance.resetSpeedDetails();
+        GameMenu.Instance.LoadTowerAndSpells(currentLevel.allowedTowers);
     }
 
     // Start is called before the first frame update
     public void StartGame()
     {
-        GameObject.FindObjectOfType<GameMenu>().updateRoundDetails(1,currentLevel.rounds.Length);
-        GameObject.FindObjectOfType<GameMenu>().updateHealthCount(currentLevel.startingHealth);
-        //path = GetComponent<LineRenderer>();
-        StartCoroutine(SpawnRounds());
+        EnemySpawner = StartCoroutine(SpawnRounds());
     }
 
     // Update is called once per frame

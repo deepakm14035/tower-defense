@@ -13,10 +13,7 @@ namespace MenuManagement
         protected virtual void Awake()
         {
             //Debug.Log(gameObject.name);
-            if (instance != null)
-                Destroy(gameObject);
-            else
-                instance = (T)this;
+            instance = (T)this;
         }
         protected virtual void OnDestroy()
         {

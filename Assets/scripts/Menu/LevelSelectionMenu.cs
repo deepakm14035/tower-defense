@@ -57,6 +57,7 @@ public class LevelSelectionMenu : Menu<LevelSelectionMenu>
                 Debug.Log("w" + worldNo + ", i-" + i);
                 MenuManager menuManager = GameObject.FindObjectOfType<MenuManager>();
                 menuManager.loadMenu(GameMenu.Instance, 1f, false);
+                GameMenu.Instance.ResetGame();
                 GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
                 gameManager.loadGame(i);
             });

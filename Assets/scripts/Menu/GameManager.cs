@@ -29,6 +29,36 @@ public class GameManager : MonoBehaviour
         _mapGenerator = GameObject.FindObjectOfType<MapGenerator>();
     }
 
+    private void resetScene()
+    {
+        //remove path
+        var gameObjects = GameObject.FindGameObjectsWithTag("pathType");
+        for(int i=0;i<gameObjects.Length;i++)
+        {
+            Object.Destroy(gameObjects[i]);
+        }
+        //remove enemies
+        gameObjects = GameObject.FindGameObjectsWithTag("enemy");
+        for (int i = 0; i < gameObjects.Length; i++)
+        {
+            Object.Destroy(gameObjects[i]);
+        }
+        //remove towers
+        gameObjects = GameObject.FindGameObjectsWithTag("tower");
+        for (int i = 0; i < gameObjects.Length; i++)
+        {
+            Object.Destroy(gameObjects[i]);
+        }
+        //remove projectiles
+        gameObjects = GameObject.FindGameObjectsWithTag("projectile");
+        for (int i = 0; i < gameObjects.Length; i++)
+        {
+            Object.Destroy(gameObjects[i]);
+        }
+
+        StopCoroutine(_levelGenerator.EnemySpawner);
+    }
+
     public void loadGame(int levelNo)
     {
         levelNum = levelNo;
@@ -39,6 +69,7 @@ public class GameManager : MonoBehaviour
     public void loadGame()
     {
         //levelNum = levelNo;
+        resetScene();
         _mapGenerator.GenerateLevel(levelList[levelNum]);
         StartCoroutine(timerForGameStart(10.0f));
     }
@@ -60,7 +91,8 @@ public class GameManager : MonoBehaviour
     {
         float timePassed = 0.0f;
         _timerText.gameObject.SetActive(true);
-        _levelGenerator.setStartCoins();
+        _timerText.gameObject.transform.parent.gameObject.SetActive(true);
+        _levelGenerator.initializeGameParameters();
         while (timePassed < timer)
         {
             timePassed += Time.deltaTime;
@@ -71,6 +103,11 @@ public class GameManager : MonoBehaviour
         _levelGenerator.StartGame();
         _timerText.gameObject.transform.parent.gameObject.SetActive(false);
         gameStarted = true;
+    }
+
+    public void GoHome()
+    {
+        resetScene();
     }
 
     private void Update()

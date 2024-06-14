@@ -89,7 +89,7 @@ namespace MenuManagement
                 loadingScreen = Instantiate(_loadingScreen, Vector3.zero, Quaternion.identity);
                 yield return null;
             }
-            yield return new WaitForSeconds(delay);
+            //yield return new WaitForSeconds(delay);
             menuStack.Peek().gameObject.SetActive(false);
             menuStack.Push(menu);
             menu.gameObject.SetActive(true);

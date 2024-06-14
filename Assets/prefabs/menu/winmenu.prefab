@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 6791631464559041081}
   - component: {fileID: 6791631464559041080}
   - component: {fileID: 6791631464559041083}
-  - component: {fileID: 6791631464559041087}
+  - component: {fileID: 1258400129466578156}
   m_Layer: 5
   m_Name: winmenu
   m_TagString: Untagged
@@ -259,7 +259,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &6791631464559041087
+--- !u!114 &1258400129466578156
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -268,11 +268,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6791631464559041082}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d17130062aa7788479542ca00d18df3e, type: 3}
+  m_Script: {fileID: 11500000, guid: 619aef1b4e7569a47a484c1ae24637e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinsText: {fileID: 0}
-  topScore: {fileID: 0}
 --- !u!1 &6791631464641156193
 GameObject:
   m_ObjectHideFlags: 0

@@ -95,6 +95,14 @@ public class Enemy : MonoBehaviour
         return m_currentIndex;
     }
 
+    private void GameLost()
+    {
+        m_UIControllerObj.showGameOver();
+
+        MenuManagement.MenuManager.Instance.loadMenu(MenuManagement.LoseMenu.Instance);
+
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -113,8 +121,7 @@ public class Enemy : MonoBehaviour
                     GameMenu.instance.playPlayerHurt();
                     if (m_UIControllerObj.getHealthCount() <= 0)
                     {
-                        m_UIControllerObj.showGameOver();
-                        //MenuManagement.MenuManager.Instance.loadMenu(MenuManagement.lo)
+                        GameLost();
                     }
                     GameObject.Find("Audio Source").GetComponent<SoundManager>().playAudio(dyingSound,0.3f);
 
