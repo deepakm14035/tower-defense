@@ -94,7 +94,7 @@ public class DragNDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
         newTower.GetComponent<BuyableItem>().source = FindObjectOfType<SoundManager>();
         newTower.transform.position = new Vector3(newTower.transform.position.x, newTower.transform.position.y, 0f);
 
-        GameMenu.instance.updateCoinCount(GameMenu.instance.getCoinCount()-newTower.GetComponent<BuyableItem>().cost);
+        GameMenu.instance.addCoins(-newTower.GetComponent<BuyableItem>().cost);
         newTower = null;
         GameMenu.Instance.enableDisableItems(GameMenu.ItemType.None, false);
     }

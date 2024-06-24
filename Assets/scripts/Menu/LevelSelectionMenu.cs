@@ -66,14 +66,15 @@ public class LevelSelectionMenu : Menu<LevelSelectionMenu>
 
     void clearButtons()
     {
-        /*for (int i = 0; i < _levelListPanel.GetComponentsInChildren<GameObject>().Length; i++)
+        var levelButtons = _levelListPanel.GetComponentsInChildren<Transform>();
+        for (int i = 0; i < levelButtons.Length; i++)
         {
-            int len = _levelListPanel.GetComponentsInChildren<GameObject>()[i].GetComponentsInChildren<Button>().Length;
+            int len = levelButtons[i].gameObject.GetComponentsInChildren<Button>().Length;
             for (int j = 0; j < len; j++)
             {
-                GameObject.Destroy(_levelListPanel.GetComponentsInChildren<GameObject>()[i].GetComponentsInChildren<Button>()[j].gameObject);
+                GameObject.Destroy(levelButtons[i].gameObject.GetComponentsInChildren<Button>()[j].gameObject);
             }
-        }*/
+        }
     }
 
     public void nextList()

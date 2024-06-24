@@ -18,6 +18,8 @@ public class Enemy : MonoBehaviour
     GameMenu m_UIControllerObj;
     public float distanceCovered;
     public float maxHealth;
+    public delegate void OnDestroyedDelegate();
+    public event OnDestroyedDelegate OnDestroyedEvent;
     static float totalLength = 0;
 
      void OnTriggerEnter2D(Collider2D collision)
@@ -48,8 +50,9 @@ public class Enemy : MonoBehaviour
             if (m_UIControllerObj == null)
                 m_UIControllerObj = GameObject.FindObjectOfType<GameMenu>();
 
-            m_UIControllerObj.updateCoinCount(m_UIControllerObj.getCoinCount() + m_coinReward);
+            m_UIControllerObj.addCoins(m_coinReward);
             //Instantiate(m_onDestroyPS, transform.position, Quaternion.Euler(90f,0f,0f));
+            OnDestroyedEvent?.Invoke();
             GameObject.Destroy(gameObject);
         }
     }
@@ -124,7 +127,7 @@ public class Enemy : MonoBehaviour
                         GameLost();
                     }
                     GameObject.Find("Audio Source").GetComponent<SoundManager>().playAudio(dyingSound,0.3f);
-
+                    OnDestroyedEvent?.Invoke();
                     GameObject.Destroy(gameObject);
                     LevelGenerator lg = FindObjectOfType<LevelGenerator>();
                     Debug.Log("checking - "+ lg.allRoundsComplete);

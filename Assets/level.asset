@@ -17,38 +17,47 @@ MonoBehaviour:
     enemyCount: 03000000
     enemyTypeSpawnGap: 1
     spawnGap: 3
+    roundCompletionBonus: 15
   - enemyType: 0000000001000000
     enemyCount: 0a00000002000000
     enemyTypeSpawnGap: 3
     spawnGap: 2
+    roundCompletionBonus: 15
   - enemyType: 01000000
     enemyCount: 0a000000
     enemyTypeSpawnGap: 2
     spawnGap: 4.5
+    roundCompletionBonus: 15
   - enemyType: 0000000001000000
     enemyCount: 0300000003000000
     enemyTypeSpawnGap: 2
     spawnGap: 1.2
+    roundCompletionBonus: 15
   - enemyType: 0000000001000000
     enemyCount: 0a0000000a000000
     enemyTypeSpawnGap: 1.8
     spawnGap: 0.8
+    roundCompletionBonus: 20
   - enemyType: 0000000001000000
     enemyCount: 0a0000000a000000
     enemyTypeSpawnGap: 1.5
     spawnGap: 0.8
+    roundCompletionBonus: 20
   - enemyType: 000000000100000002000000
     enemyCount: 0a0000000a0000000a000000
     enemyTypeSpawnGap: 1.2
     spawnGap: 0.8
+    roundCompletionBonus: 20
   - enemyType: 000000000100000002000000
     enemyCount: 140000001400000014000000
     enemyTypeSpawnGap: 1.2
     spawnGap: 0.5
+    roundCompletionBonus: 20
   - enemyType: 00000000010000000200000003000000
     enemyCount: 1e0000001e0000001e00000003000000
     enemyTypeSpawnGap: 1
     spawnGap: 0.5
+    roundCompletionBonus: 0
   startingCoins: 100
   startingHealth: 10
   path:
@@ -58,3 +67,4 @@ MonoBehaviour:
   - {x: 7, y: -5, z: 0}
   cameraSize: 10
   allowedTowers: 0000000001000000
+  allowedSpells: 

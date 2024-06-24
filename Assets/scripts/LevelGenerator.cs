@@ -80,6 +80,15 @@ public class LevelGenerator : MonoBehaviour
                         currentLevel.path[0],
                         Quaternion.identity);
                     enemy.GetComponent<Enemy>().source = source;
+
+                    if(currentType == currentLevel.rounds[currentRound].enemyCount.Length-1 && i == currentLevel.rounds[currentRound].enemyCount[currentType] - 1)
+                    {
+                        enemy.GetComponent<Enemy>().OnDestroyedEvent += () =>
+                        {
+                            GameMenu.instance.addCoins(currentLevel.rounds[currentRound].roundCompletionBonus);
+                        };
+                    }
+
                     yield return new WaitForSeconds(currentLevel.rounds[currentRound].spawnGap);
                 }
                 yield return new WaitForSeconds(currentLevel.rounds[currentRound].enemyTypeSpawnGap);

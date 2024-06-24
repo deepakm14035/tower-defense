@@ -43,6 +43,7 @@ public class GameMenu : Menu<GameMenu>
     public GameObject upgradePS;
     public GameObject towerEditPanelBG;
     [SerializeField] private Text coinCount;
+    [SerializeField] private Text coinUpdateValue;
     [SerializeField] private Text roundText;
     [SerializeField] private Text healthText;
     [SerializeField] private Text gameplaySpeedText;
@@ -60,6 +61,8 @@ public class GameMenu : Menu<GameMenu>
 
     public int towersPerRow = 4;
     int speed = 0;
+    private bool _stopExistingCoinUpdateDisplay;
+    
     public static GameMenu getInstance()
     {
         return instance;
@@ -68,6 +71,45 @@ public class GameMenu : Menu<GameMenu>
     public void updateCoinCount(int newVal)
     {
         coinCount.text = newVal + "";
+    }
+
+    public void addCoins(int newVal)
+    {
+
+        if (newVal > 0)
+        {
+            coinUpdateValue.color = Color.green;
+            coinUpdateValue.text = "+"+newVal + "";
+        }
+        else
+        {
+            coinUpdateValue.color = Color.red;
+            coinUpdateValue.text = newVal + "";
+        }
+
+        StartCoroutine(DisplayCoinUpdate());
+
+        coinCount.text = (getCoinCount()+newVal) + "";
+    }
+
+    private IEnumerator DisplayCoinUpdate()
+    {
+        if (coinUpdateValue.enabled)
+        {
+            _stopExistingCoinUpdateDisplay = true;
+            yield return new WaitForSeconds(0.1f);
+            _stopExistingCoinUpdateDisplay = false;
+        }
+        
+        coinUpdateValue.enabled = true;
+        var timeTaken = 0f;
+        while (timeTaken<1f || !_stopExistingCoinUpdateDisplay)
+        {
+            yield return null;
+            timeTaken+=Time.deltaTime;
+        }
+        coinUpdateValue.enabled = false;
+        yield return null;
     }
 
     public int getCoinCount()
@@ -116,8 +158,8 @@ public class GameMenu : Menu<GameMenu>
     }
     public void updateSpeedDetails()
     {
-        speed=(speed+1)%3;
-        gameplaySpeedText.text = (speed+1) + " of 3";
+        speed=(speed+1)%6;
+        gameplaySpeedText.text = (speed+1) + " of 6";
         Time.timeScale = 1f + speed * 0.5f;
         Debug.Log(Time.timeScale);
     }
@@ -125,7 +167,7 @@ public class GameMenu : Menu<GameMenu>
     public void resetSpeedDetails()
     {
         speed = 0;
-        gameplaySpeedText.text = (speed + 1) + " of 3";
+        gameplaySpeedText.text = (speed + 1) + " of 6";
         Time.timeScale = 1f + speed * 0.5f;
         Debug.Log(Time.timeScale);
     }
@@ -223,7 +265,7 @@ public class GameMenu : Menu<GameMenu>
             showCoinAlert();
             return;
         }
-        updateCoinCount(GameMenu.instance.getCoinCount() - cost);
+        addCoins(- cost);
         selectedTower.gameObject.GetComponent<SpriteRenderer>().sprite = towerUpgradeSprites[currentLevel];
         selectedTower.upgradeLevel(selectedTowerDetails.levels[currentLevel]);
         updateTowerRange(selectedTower.range, selectedTower.gameObject.transform.position);
@@ -239,6 +281,7 @@ public class GameMenu : Menu<GameMenu>
             m_buttonUpgrade.gameObject.SetActive(val);
             m_buttonSell.gameObject.SetActive(val);
             m_buttonSpecialAbility.gameObject.SetActive(val);
+        towerEditPanelBG.SetActive(val);
         }
         else if (type == ItemType.SellConfirm)
         {
@@ -246,9 +289,14 @@ public class GameMenu : Menu<GameMenu>
             m_buttonSellConfirm.gameObject.SetActive(val);
             m_buttonSellCancel.gameObject.SetActive(val);
             m_textConfirm.gameObject.SetActive(val);
+            towerEditPanelBG.SetActive(val);
+        }
+        else
+        {
+            enableDisableItems(ItemType.Main, false);
+            enableDisableItems(ItemType.SellConfirm, false);
         }
         m_towerRangeObject.SetActive(val);
-        towerEditPanelBG.SetActive(val);
     }
 
     private int getTowerSellingCost()
@@ -328,6 +376,29 @@ public class GameMenu : Menu<GameMenu>
 
     public void LoadTowerAndSpells(int[] availableTowers)
     {
+        //clear existing tower and spell data in UI
+
+        for(int i = 0; i < placeholderRows.Length; i++)
+        {
+            var children = placeholderRows[i].GetComponentsInChildren<Transform>().ToList();
+            children.RemoveAt(0);
+            foreach (var child in children)
+            {
+                GameObject.Destroy(child.gameObject);
+            }
+        }
+
+        for (int i = 0; i < spellPlaceholderRows.Length; i++)
+        {
+            var children = spellPlaceholderRows[i].GetComponentsInChildren<Transform>().ToList();
+            children.RemoveAt(0);
+            foreach (var child in children)
+            {
+                GameObject.Destroy(child.gameObject);
+            }
+        }
+
+
         int rowNum = 0;
         var allowedTowers = towers.Where((tower, index) => availableTowers.Contains(index)).ToList();
         for (int i = 0; i < allowedTowers.Count; i++)
