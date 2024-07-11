@@ -254,7 +254,7 @@ MonoBehaviour:
       cost: 120
     cost: 50
     sellPercent: 0.7
-  range: 5
+  range: 4
   damage: 0
   rotateSpeed: 0
   timeBetweenShots: 0

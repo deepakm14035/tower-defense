@@ -191,7 +191,7 @@ MonoBehaviour:
   source: {fileID: 0}
   dyingSound: {fileID: 8300000, guid: bed9013a256f66a4b95721cae6c095bb, type: 3}
   m_speedUpdated: 0
-  m_health: 1500
+  m_health: 900
   m_coinReward: 100
   m_damage: 5
   distanceCovered: 0

@@ -125,6 +125,8 @@ MonoBehaviour:
   source: {fileID: 0}
   icon: {fileID: 6950578426088342530, guid: 2db5d1d6a65f056429d7db90c8fbe5e0, type: 3}
   cost: 120
+  name: 
+  description: 
   barrel: {fileID: 0}
   projectilePrefab: {fileID: 0}
   projectileSpawnPoint: {fileID: 0}
@@ -145,7 +147,7 @@ MonoBehaviour:
       cost: 120
     cost: 120
     sellPercent: 0.7
-  range: 0
+  range: 2
   damage: 0
   rotateSpeed: 0
   timeBetweenShots: 0
