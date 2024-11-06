@@ -36,7 +36,7 @@ MonoBehaviour:
   - enemyType: 0000000001000000
     enemyCount: 0a0000000a000000
     enemyTypeSpawnGap: 1.8
-    spawnGap: 1.8
+    spawnGap: 2
     roundCompletionBonus: 20
   - enemyType: 0000000001000000
     enemyCount: 0a0000000a000000

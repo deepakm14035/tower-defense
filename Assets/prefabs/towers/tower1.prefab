@@ -199,15 +199,15 @@ MonoBehaviour:
     levels:
     - damageMultiplier: 1.2
       speedMultiplier: 1.2
-      areaMultiplier: 1.5
+      areaMultiplier: 1.2
+      cost: 30
+    - damageMultiplier: 1.2
+      speedMultiplier: 1.2
+      areaMultiplier: 1.2
       cost: 30
     - damageMultiplier: 1.2
       speedMultiplier: 1.2
       areaMultiplier: 1.5
-      cost: 30
-    - damageMultiplier: 1.2
-      speedMultiplier: 1.2
-      areaMultiplier: 2
       cost: 60
     cost: 40
     sellPercent: 85
